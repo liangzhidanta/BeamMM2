@@ -1,0 +1,16 @@
+Found 8 CSV files for training.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Scenario 'scenario3': 899 train, 112 val, 112 test.
+Scenario 'scenario4': 1091 train, 136 val, 136 test.
+Scenario 'scenario5': 1679 train, 209 val, 209 test.
+Scenario 'scenario6': 665 train, 83 val, 83 test.
+Scenario 'scenario7': 344 train, 43 val, 43 test.
+Scenario 'scenario8': 2770 train, 346 val, 346 test.
+Total Training samples: 11406
+Total Validation samples: 1422
+Total Testing samples: 1422
+Using device: cuda:0
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/mmwave_gps_joint-01-15-152626.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.

@@ -1,0 +1,54 @@
+=============================
+开始评估模型1：./checkpoints_model1/multimodal_encoder_decoder_best.pth
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 2 CSV files for testing.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Total Training samples: 3958
+Total Validation samples: 493
+Total Testing samples: 493
+Loaded state_dict from ./checkpoints_model1/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/8 [00:00<?, ?it/s]                                              Traceback (most recent call last):
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 313, in <module>
+    main()
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 302, in main
+    avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5 = test_evaluate(
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 84, in test_evaluate
+    output = model(inputs, tgt_seq)  # [B, output_length, D]
+  File "/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/model.py", line 42, in forward
+    gps_feat = gps_feat[:, :self.input_length - self.output_length, :]
+TypeError: 'NoneType' object is not subscriptable
+=============================
+开始评估模型2：./checkpoints_model2/multimodal_encoder_decoder_best.pth
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 2 CSV files for testing.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Total Training samples: 3958
+Total Validation samples: 493
+Total Testing samples: 493
+Loaded state_dict from ./checkpoints_model2/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/8 [00:00<?, ?it/s]                                              Traceback (most recent call last):
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 313, in <module>
+    main()
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 302, in main
+    avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5 = test_evaluate(
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/evaluate_MultiModalEncoderDecoderModel.py", line 84, in test_evaluate
+    output = model(inputs, tgt_seq)  # [B, output_length, D]
+  File "/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/groups/g900403/home/share/wzj/wyh/BeamMM2/model.py", line 42, in forward
+    gps_feat = gps_feat[:, :self.input_length - self.output_length, :]
+TypeError: 'NoneType' object is not subscriptable
+=============================
+所有模型训练和评估任务已完成！

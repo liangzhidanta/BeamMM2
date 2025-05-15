@@ -1,0 +1,7 @@
+Found 1 CSV files for training.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Total Training samples: 2190
+Total Validation samples: 273
+Total Testing samples: 273
+Using device: cuda:1
+Using MSELoss as the loss function.

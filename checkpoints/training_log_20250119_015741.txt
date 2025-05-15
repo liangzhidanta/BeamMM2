@@ -1,0 +1,64 @@
+Found 1 CSV files for training.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Total Training samples: 1768
+Total Validation samples: 220
+Total Testing samples: 220
+Using device: cuda:1
+Using MSELoss as the loss function.
+> /home/wzj/wyh/BeamMM2/model.py(122)forward()
+-> projected_feat = self.proj(raw_mmwave) # [B, T, D_raw] -> [B, T, embed_dim]
+(Pdb) > /home/wzj/wyh/BeamMM2/model.py(125)forward()
+-> output = self.decoder(projected_feat, tgt_seq)  # [B, tgt_seq_length, D]
+(Pdb) torch.Size([16, 8, 768])
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(33)forward()
+-> B, tgt_seq_length = tgt_seq.size()
+(Pdb) torch.Size([16, 8, 768])
+(Pdb) *** NameError: name 'tgt' is not defined
+(Pdb) torch.Size([16, 3])
+(Pdb) tensor([[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]], device='cuda:1')
+(Pdb) *** NameError: name 'pself' is not defined
+(Pdb) 768
+(Pdb) 27.712812921102035
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(35)forward()
+-> tgt_embeddings = self.target_embedding(tgt_seq) * (self.embed_dim ** 0.5)  # [B, tgt_seq_length, embed_dim]
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(36)forward()
+-> tgt_embeddings = tgt_embeddings.transpose(0, 1)  # [tgt_seq_length, B, embed_dim]
+(Pdb) torch.Size([16, 3, 768])
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(40)forward()
+-> memory = memory.transpose(0, 1)  # [T, B, embed_dim]
+(Pdb) torch.Size([16, 8, 768])
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(43)forward()
+-> tgt_mask = self.generate_square_subsequent_mask(tgt_seq_length).to(memory.device)  # [tgt_seq_length, tgt_seq_length]
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(46)forward()
+-> decoder_output = self.transformer_decoder(tgt_embeddings, memory, tgt_mask=tgt_mask)  # [tgt_seq_length, B, embed_dim]
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(48)forward()
+-> decoder_output = decoder_output.transpose(0, 1)  # [B, tgt_seq_length, embed_dim]
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(49)forward()
+-> output = self.output_layer(decoder_output)  # [B, tgt_seq_length, output_dim]
+(Pdb) *** NameError: name 'deocer_output' is not defined
+(Pdb) torch.Size([16, 3, 768])
+(Pdb) > /home/wzj/wyh/BeamMM2/decoder.py(51)forward()
+-> return output
+(Pdb) torch.Size([16, 3, 64])
+(Pdb) --Return--
+> /home/wzj/wyh/BeamMM2/decoder.py(51)forward()->tensor([[[-0....AddBackward0>)
+-> return output
+(Pdb) --Return--
+> /home/wzj/anaconda3/envs/bind_origin/lib/python3.9/site-packages/torch/nn/modules/module.py(1194)_call_impl()->tensor([[[-0....AddBackward0>)
+-> return forward_call(*input, **kwargs)
+(Pdb) 

@@ -1,0 +1,156 @@
+Found 8 CSV files for training.
+Total Training samples: 11400
+Total Validation samples: 1425
+Total Testing samples: 1425
+Using device: cuda
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/mmwave_gps_joint_s8.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/50], Train Loss: 0.0227, Val Loss: 0.0059
+Epoch Duration: 0h 31m 43s, Estimated Remaining Time: 25h 54m 15s
+Saved best model at epoch 1 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [2/50], Train Loss: 0.0103, Val Loss: 0.0052
+Epoch Duration: 0h 33m 10s, Estimated Remaining Time: 25h 59m 5s
+Saved best model at epoch 2 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [3/50], Train Loss: 0.0074, Val Loss: 0.0044
+Epoch Duration: 0h 33m 9s, Estimated Remaining Time: 25h 41m 24s
+Saved best model at epoch 3 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [4/50], Train Loss: 0.0057, Val Loss: 0.0052
+Epoch Duration: 0h 33m 56s, Estimated Remaining Time: 25h 24m 52s
+Epoch [5/50], Train Loss: 0.0047, Val Loss: 0.0039
+Epoch Duration: 0h 33m 59s, Estimated Remaining Time: 24h 59m 14s
+Saved best model at epoch 5 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 5 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_5.pth
+Epoch [6/50], Train Loss: 0.0039, Val Loss: 0.0034
+Epoch Duration: 0h 34m 8s, Estimated Remaining Time: 24h 34m 15s
+Saved best model at epoch 6 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [7/50], Train Loss: 0.0036, Val Loss: 0.0034
+Epoch Duration: 0h 34m 23s, Estimated Remaining Time: 24h 7m 44s
+Epoch [8/50], Train Loss: 0.0033, Val Loss: 0.0030
+Epoch Duration: 0h 33m 58s, Estimated Remaining Time: 23h 35m 40s
+Saved best model at epoch 8 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [9/50], Train Loss: 0.0031, Val Loss: 0.0027
+Epoch Duration: 0h 33m 29s, Estimated Remaining Time: 23h 1m 54s
+Saved best model at epoch 9 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [10/50], Train Loss: 0.0029, Val Loss: 0.0027
+Epoch Duration: 0h 33m 22s, Estimated Remaining Time: 22h 27m 43s
+Saved best model at epoch 10 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 10 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_10.pth
+Epoch [11/50], Train Loss: 0.0028, Val Loss: 0.0027
+Epoch Duration: 0h 33m 7s, Estimated Remaining Time: 21h 52m 58s
+Epoch [12/50], Train Loss: 0.0026, Val Loss: 0.0025
+Epoch Duration: 0h 34m 58s, Estimated Remaining Time: 21h 23m 26s
+Saved best model at epoch 12 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [13/50], Train Loss: 0.0025, Val Loss: 0.0023
+Epoch Duration: 0h 33m 36s, Estimated Remaining Time: 20h 49m 46s
+Saved best model at epoch 13 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [14/50], Train Loss: 0.0023, Val Loss: 0.0022
+Epoch Duration: 0h 33m 10s, Estimated Remaining Time: 20h 14m 57s
+Saved best model at epoch 14 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [15/50], Train Loss: 0.0022, Val Loss: 0.0021
+Epoch Duration: 0h 33m 39s, Estimated Remaining Time: 19h 41m 28s
+Saved best model at epoch 15 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 15 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_15.pth
+Epoch [16/50], Train Loss: 0.0021, Val Loss: 0.0020
+Epoch Duration: 0h 34m 14s, Estimated Remaining Time: 19h 9m 19s
+Saved best model at epoch 16 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [17/50], Train Loss: 0.0020, Val Loss: 0.0019
+Epoch Duration: 0h 33m 2s, Estimated Remaining Time: 18h 34m 26s
+Saved best model at epoch 17 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [18/50], Train Loss: 0.0019, Val Loss: 0.0019
+Epoch Duration: 0h 34m 10s, Estimated Remaining Time: 18h 1m 45s
+Epoch [19/50], Train Loss: 0.0018, Val Loss: 0.0017
+Epoch Duration: 0h 35m 6s, Estimated Remaining Time: 17h 30m 5s
+Saved best model at epoch 19 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [20/50], Train Loss: 0.0017, Val Loss: 0.0016
+Epoch Duration: 0h 33m 32s, Estimated Remaining Time: 16h 56m 5s
+Saved best model at epoch 20 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 20 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_20.pth
+Epoch [21/50], Train Loss: 0.0017, Val Loss: 0.0016
+Epoch Duration: 0h 34m 18s, Estimated Remaining Time: 16h 23m 11s
+Saved best model at epoch 21 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [22/50], Train Loss: 0.0016, Val Loss: 0.0016
+Epoch Duration: 0h 33m 13s, Estimated Remaining Time: 15h 48m 40s
+Saved best model at epoch 22 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [23/50], Train Loss: 0.0015, Val Loss: 0.0015
+Epoch Duration: 0h 33m 3s, Estimated Remaining Time: 15h 14m 3s
+Saved best model at epoch 23 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [24/50], Train Loss: 0.0015, Val Loss: 0.0014
+Epoch Duration: 0h 34m 6s, Estimated Remaining Time: 14h 40m 41s
+Saved best model at epoch 24 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [25/50], Train Loss: 0.0014, Val Loss: 0.0014
+Epoch Duration: 0h 32m 57s, Estimated Remaining Time: 14h 6m 9s
+Saved best model at epoch 25 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 25 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_25.pth
+Epoch [26/50], Train Loss: 0.0014, Val Loss: 0.0014
+Epoch Duration: 0h 33m 56s, Estimated Remaining Time: 13h 32m 41s
+Saved best model at epoch 26 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [27/50], Train Loss: 0.0014, Val Loss: 0.0014
+Epoch Duration: 0h 33m 2s, Estimated Remaining Time: 12h 58m 20s
+Epoch [28/50], Train Loss: 0.0013, Val Loss: 0.0013
+Epoch Duration: 0h 34m 9s, Estimated Remaining Time: 12h 24m 45s
+Saved best model at epoch 28 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [29/50], Train Loss: 0.0013, Val Loss: 0.0012
+Epoch Duration: 0h 33m 27s, Estimated Remaining Time: 11h 50m 48s
+Saved best model at epoch 29 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [30/50], Train Loss: 0.0012, Val Loss: 0.0012
+Epoch Duration: 0h 33m 23s, Estimated Remaining Time: 11h 16m 49s
+Saved model at epoch 30 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_30.pth
+Epoch [31/50], Train Loss: 0.0012, Val Loss: 0.0012
+Epoch Duration: 0h 33m 57s, Estimated Remaining Time: 10h 43m 5s
+Saved best model at epoch 31 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [32/50], Train Loss: 0.0011, Val Loss: 0.0011
+Epoch Duration: 0h 32m 48s, Estimated Remaining Time: 10h 8m 48s
+Saved best model at epoch 32 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [33/50], Train Loss: 0.0011, Val Loss: 0.0012
+Epoch Duration: 0h 34m 2s, Estimated Remaining Time: 9h 35m 13s
+Epoch [34/50], Train Loss: 0.0011, Val Loss: 0.0011
+Epoch Duration: 0h 33m 22s, Estimated Remaining Time: 9h 1m 10s
+Saved best model at epoch 34 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [35/50], Train Loss: 0.0011, Val Loss: 0.0011
+Epoch Duration: 0h 34m 41s, Estimated Remaining Time: 8h 27m 49s
+Saved best model at epoch 35 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 35 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_35.pth
+Epoch [36/50], Train Loss: 0.0011, Val Loss: 0.0011
+Epoch Duration: 0h 33m 49s, Estimated Remaining Time: 7h 54m 4s
+Saved best model at epoch 36 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [37/50], Train Loss: 0.0010, Val Loss: 0.0010
+Epoch Duration: 0h 32m 53s, Estimated Remaining Time: 7h 19m 57s
+Saved best model at epoch 37 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [38/50], Train Loss: 0.0010, Val Loss: 0.0011
+Epoch Duration: 0h 34m 6s, Estimated Remaining Time: 6h 46m 17s
+Epoch [39/50], Train Loss: 0.0010, Val Loss: 0.0010
+Epoch Duration: 0h 32m 57s, Estimated Remaining Time: 6h 12m 10s
+Saved best model at epoch 39 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [40/50], Train Loss: 0.0010, Val Loss: 0.0011
+Epoch Duration: 0h 33m 8s, Estimated Remaining Time: 5h 38m 13s
+Saved model at epoch 40 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_40.pth
+Epoch [41/50], Train Loss: 0.0010, Val Loss: 0.0010
+Epoch Duration: 0h 33m 49s, Estimated Remaining Time: 5h 4m 25s
+Saved best model at epoch 41 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [42/50], Train Loss: 0.0009, Val Loss: 0.0010
+Epoch Duration: 0h 32m 50s, Estimated Remaining Time: 4h 30m 27s
+Epoch [43/50], Train Loss: 0.0009, Val Loss: 0.0010
+Epoch Duration: 0h 32m 59s, Estimated Remaining Time: 3h 56m 31s
+Saved best model at epoch 43 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [44/50], Train Loss: 0.0009, Val Loss: 0.0010
+Epoch Duration: 0h 32m 49s, Estimated Remaining Time: 3h 22m 37s
+Epoch [45/50], Train Loss: 0.0009, Val Loss: 0.0009
+Epoch Duration: 0h 32m 57s, Estimated Remaining Time: 2h 48m 45s
+Saved best model at epoch 45 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Saved model at epoch 45 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_45.pth
+Epoch [46/50], Train Loss: 0.0009, Val Loss: 0.0009
+Epoch Duration: 0h 32m 58s, Estimated Remaining Time: 2h 14m 57s
+Saved best model at epoch 46 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [47/50], Train Loss: 0.0009, Val Loss: 0.0009
+Epoch Duration: 0h 33m 10s, Estimated Remaining Time: 1h 41m 11s
+Epoch [48/50], Train Loss: 0.0009, Val Loss: 0.0010
+Epoch Duration: 0h 33m 20s, Estimated Remaining Time: 1h 7m 26s
+Epoch [49/50], Train Loss: 0.0009, Val Loss: 0.0009
+Epoch Duration: 0h 33m 41s, Estimated Remaining Time: 0h 33m 43s
+Saved best model at epoch 49 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_best.pth
+Epoch [50/50], Train Loss: 0.0008, Val Loss: 0.0009
+Epoch Duration: 0h 33m 50s, Estimated Remaining Time: 0h 0m 0s
+Saved model at epoch 50 to ./fig1/wirelessbind_s8_bv/mmwave_encoder_decoder_epoch_50.pth
+Loaded best model for testing.
+Test Loss (MSE): 0.0007

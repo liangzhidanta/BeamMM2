@@ -1,0 +1,12 @@
+Found 1 CSV files for training.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Total Training samples: 2190
+Total Validation samples: 273
+Total Testing samples: 273
+Using device: cuda:0
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/mmwave_gps_joint-01-15-152626.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/500], Train Loss: 0.0302, Val Loss: 0.0086
+Epoch Duration: 0h 5m 15s, Estimated Remaining Time: 43h 40m 4s
+Saved best model at epoch 1 to ./general_checkpoints/multimodal_encoder_decoder_best.pth

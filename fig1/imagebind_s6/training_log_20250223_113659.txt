@@ -1,0 +1,18 @@
+Found 6 CSV files for training.
+Total Training samples: 8286
+Total Validation samples: 1035
+Total Testing samples: 1037
+Using device: cuda
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/vision_s6.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/50], Train Loss: 0.0269, Val Loss: 0.0058
+Epoch Duration: 0h 25m 7s, Estimated Remaining Time: 20h 30m 54s
+Saved best model at epoch 1 to ./fig1/imagebind_s6/multimodal_encoder_decoder_best.pth
+Epoch [2/50], Train Loss: 0.0128, Val Loss: 0.0059
+Epoch Duration: 0h 27m 17s, Estimated Remaining Time: 20h 59m 27s
+Epoch [3/50], Train Loss: 0.0103, Val Loss: 0.0058
+Epoch Duration: 0h 26m 54s, Estimated Remaining Time: 20h 43m 43s
+Epoch [4/50], Train Loss: 0.0085, Val Loss: 0.0050
+Epoch Duration: 1h 53m 55s, Estimated Remaining Time: 37h 3m 9s
+Saved best model at epoch 4 to ./fig1/imagebind_s6/multimodal_encoder_decoder_best.pth

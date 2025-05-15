@@ -1,0 +1,18 @@
+=============================
+开始训练模型1（使用预训练编码器：/home/wzj/BeamMM/checkpoints/mmwave_gps_joint_s4.pth）...
+开始评估模型1：./fig1/wirelessbind_s4/multimodal_encoder_decoder_best.pth
+/home/wzj/anaconda3/envs/bind_origin/lib/python3.9/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/wzj/anaconda3/envs/bind_origin/lib/python3.9/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 4 CSV files for testing.
+Total Training samples: 5944
+Total Validation samples: 743
+Total Testing samples: 743
+Loaded state_dict from ./fig1/wirelessbind_s4/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/12 [00:00<?, ?it/s]Testing:   8%|▊         | 1/12 [00:30<05:32, 30.20s/it]Testing:  17%|█▋        | 2/12 [00:36<02:38, 15.85s/it]Testing:  25%|██▌       | 3/12 [00:41<01:41, 11.28s/it]Testing:  33%|███▎      | 4/12 [00:47<01:13,  9.13s/it]Testing:  42%|████▏     | 5/12 [00:53<00:55,  7.97s/it]Testing:  50%|█████     | 6/12 [00:59<00:43,  7.27s/it]Testing:  58%|█████▊    | 7/12 [01:05<00:34,  6.94s/it]Testing:  67%|██████▋   | 8/12 [01:12<00:27,  6.83s/it]Testing:  75%|███████▌  | 9/12 [01:19<00:20,  6.91s/it]Testing:  83%|████████▎ | 10/12 [01:26<00:14,  7.04s/it]Testing:  92%|█████████▏| 11/12 [01:35<00:07,  7.42s/it]Testing: 100%|██████████| 12/12 [01:40<00:00,  6.92s/it]                                                        Test Loss (MSE): 0.0016
+Test Loss (NMSE): 0.2352
+Accuracy@1: 0.2974
+Accuracy@5: 0.6488
+=============================

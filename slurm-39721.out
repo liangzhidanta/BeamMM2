@@ -1,0 +1,34 @@
+=============================
+开始评估模型1：./checkpoints_model1/multimodal_encoder_decoder_best.pth
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 1 CSV files for testing.
+Total Training samples: 4009
+Total Validation samples: 501
+Total Testing samples: 502
+Loaded state_dict from ./checkpoints_model1/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/8 [00:00<?, ?it/s]Testing:  12%|█▎        | 1/8 [00:31<03:39, 31.42s/it]Testing:  25%|██▌       | 2/8 [00:36<01:35, 15.90s/it]Testing:  38%|███▊      | 3/8 [00:41<00:54, 10.94s/it]Testing:  50%|█████     | 4/8 [00:46<00:34,  8.61s/it]Testing:  62%|██████▎   | 5/8 [00:51<00:21,  7.32s/it]Testing:  75%|███████▌  | 6/8 [00:56<00:13,  6.55s/it]Testing:  88%|████████▊ | 7/8 [01:01<00:06,  6.06s/it]Testing: 100%|██████████| 8/8 [01:05<00:00,  5.48s/it]                                                      Test Loss (MSE): 0.0131
+Test Loss (NMSE): 1.1058
+Accuracy@1: 0.0857
+Accuracy@5: 0.2551
+=============================
+开始评估模型2：./checkpoints_model2/multimodal_encoder_decoder_best.pth
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/u2024141030/.conda/envs/bind/lib/python3.10/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 1 CSV files for testing.
+Total Training samples: 4009
+Total Validation samples: 501
+Total Testing samples: 502
+Loaded state_dict from ./checkpoints_model2/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/8 [00:00<?, ?it/s]Testing:  12%|█▎        | 1/8 [00:14<01:38, 14.08s/it]Testing:  25%|██▌       | 2/8 [00:19<00:52,  8.77s/it]Testing:  38%|███▊      | 3/8 [00:24<00:35,  7.07s/it]Testing:  50%|█████     | 4/8 [00:29<00:25,  6.27s/it]Testing:  62%|██████▎   | 5/8 [00:34<00:17,  5.82s/it]Testing:  75%|███████▌  | 6/8 [00:39<00:11,  5.56s/it]Testing:  88%|████████▊ | 7/8 [00:44<00:05,  5.39s/it]Testing: 100%|██████████| 8/8 [00:48<00:00,  5.03s/it]                                                      Test Loss (MSE): 0.0140
+Test Loss (NMSE): 1.1507
+Accuracy@1: 0.0511
+Accuracy@5: 0.1625
+=============================
+所有模型训练和评估任务已完成！

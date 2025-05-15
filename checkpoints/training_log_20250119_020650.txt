@@ -1,0 +1,10 @@
+Found 1 CSV files for training.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Total Training samples: 1768
+Total Validation samples: 220
+Total Testing samples: 220
+Using device: cuda:1
+Using MSELoss as the loss function.
+Epoch [1/500], Train Loss: 0.0213, Val Loss: 0.0016
+Epoch Duration: 0h 1m 26s, Estimated Remaining Time: 11h 56m 26s
+Saved best model at epoch 1 to ./checkpoints/rawmmwave_decoder_best.pth

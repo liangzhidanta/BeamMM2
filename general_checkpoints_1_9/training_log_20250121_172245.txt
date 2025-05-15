@@ -1,0 +1,76 @@
+Found 9 CSV files for training.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Scenario 'scenario2': 2190 train, 273 val, 273 test.
+Scenario 'scenario3': 899 train, 112 val, 112 test.
+Scenario 'scenario4': 1091 train, 136 val, 136 test.
+Scenario 'scenario5': 1679 train, 209 val, 209 test.
+Scenario 'scenario6': 665 train, 83 val, 83 test.
+Scenario 'scenario7': 344 train, 43 val, 43 test.
+Scenario 'scenario8': 2770 train, 346 val, 346 test.
+Scenario 'scenario9': 4010 train, 501 val, 501 test.
+Total Training samples: 15416
+Total Validation samples: 1923
+Total Testing samples: 1923
+Using device: cuda:1
+Using MSELoss as the loss function.
+Epoch [1/500], Train Loss: 0.0090, Val Loss: 0.0021
+Epoch Duration: 0h 23m 50s, Estimated Remaining Time: 198h 14m 14s
+Saved best model at epoch 1 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [2/500], Train Loss: 0.0026, Val Loss: 0.0018
+Epoch Duration: 0h 21m 17s, Estimated Remaining Time: 187h 24m 12s
+Saved best model at epoch 2 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [3/500], Train Loss: 0.0020, Val Loss: 0.0017
+Epoch Duration: 0h 21m 47s, Estimated Remaining Time: 185h 1m 24s
+Saved best model at epoch 3 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [4/500], Train Loss: 0.0018, Val Loss: 0.0016
+Epoch Duration: 0h 23m 1s, Estimated Remaining Time: 186h 15m 44s
+Saved best model at epoch 4 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [5/500], Train Loss: 0.0017, Val Loss: 0.0016
+Epoch Duration: 0h 22m 50s, Estimated Remaining Time: 186h 31m 13s
+Saved model at epoch 5 to ./general_checkpoints/rawmmwave_decoder_epoch_5.pth
+Epoch [6/500], Train Loss: 0.0016, Val Loss: 0.0015
+Epoch Duration: 0h 22m 34s, Estimated Remaining Time: 186h 7m 39s
+Saved best model at epoch 6 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [7/500], Train Loss: 0.0016, Val Loss: 0.0014
+Epoch Duration: 0h 22m 51s, Estimated Remaining Time: 186h 8m 29s
+Saved best model at epoch 7 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [8/500], Train Loss: 0.0015, Val Loss: 0.0015
+Epoch Duration: 0h 23m 15s, Estimated Remaining Time: 186h 28m 29s
+Epoch [9/500], Train Loss: 0.0015, Val Loss: 0.0015
+Epoch Duration: 0h 24m 24s, Estimated Remaining Time: 187h 36m 54s
+Epoch [10/500], Train Loss: 0.0015, Val Loss: 0.0014
+Epoch Duration: 0h 23m 41s, Estimated Remaining Time: 187h 51m 24s
+Saved best model at epoch 10 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Saved model at epoch 10 to ./general_checkpoints/rawmmwave_decoder_epoch_10.pth
+Epoch [11/500], Train Loss: 0.0015, Val Loss: 0.0014
+Epoch Duration: 0h 32m 15s, Estimated Remaining Time: 194h 26m 39s
+Saved best model at epoch 11 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [12/500], Train Loss: 0.0014, Val Loss: 0.0014
+Epoch Duration: 0h 32m 29s, Estimated Remaining Time: 199h 57m 40s
+Saved best model at epoch 12 to ./general_checkpoints/rawmmwave_decoder_best.pth
+Epoch [13/500], Train Loss: 0.0014, Val Loss: 0.0014
+Epoch Duration: 0h 31m 0s, Estimated Remaining Time: 203h 42m 49s
+Epoch [14/500], Train Loss: 0.0013, Val Loss: 0.0015
+Epoch Duration: 0h 29m 55s, Estimated Remaining Time: 206h 5m 24s
+Epoch [15/500], Train Loss: 0.0012, Val Loss: 0.0017
+Epoch Duration: 0h 26m 22s, Estimated Remaining Time: 206h 9m 54s
+Saved model at epoch 15 to ./general_checkpoints/rawmmwave_decoder_epoch_15.pth
+Epoch [16/500], Train Loss: 0.0011, Val Loss: 0.0019
+Epoch Duration: 0h 29m 56s, Estimated Remaining Time: 207h 59m 7s
+Epoch [17/500], Train Loss: 0.0011, Val Loss: 0.0019
+Epoch Duration: 0h 30m 14s, Estimated Remaining Time: 209h 39m 54s
+Epoch [18/500], Train Loss: 0.0011, Val Loss: 0.0020
+Epoch Duration: 0h 29m 11s, Estimated Remaining Time: 210h 37m 58s
+Epoch 00018: reducing learning rate of group 0 to 5.0000e-05.
+Epoch [19/500], Train Loss: 0.0009, Val Loss: 0.0018
+Epoch Duration: 0h 30m 6s, Estimated Remaining Time: 211h 50m 20s
+Epoch [20/500], Train Loss: 0.0009, Val Loss: 0.0019
+Epoch Duration: 0h 31m 56s, Estimated Remaining Time: 213h 36m 12s
+Saved model at epoch 20 to ./general_checkpoints/rawmmwave_decoder_epoch_20.pth
+Epoch [21/500], Train Loss: 0.0009, Val Loss: 0.0020
+Epoch Duration: 0h 31m 37s, Estimated Remaining Time: 215h 2m 49s
+Epoch [22/500], Train Loss: 0.0009, Val Loss: 0.0018
+Epoch Duration: 0h 28m 41s, Estimated Remaining Time: 215h 14m 4s
+Early stopping at epoch 22
+Loaded best model for testing.
+Test Loss (MSE): 0.0014

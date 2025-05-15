@@ -1,0 +1,5 @@
+Found 6 CSV files for training.
+Total Training samples: 8286
+Total Validation samples: 1035
+Total Testing samples: 1037
+Using device: cuda

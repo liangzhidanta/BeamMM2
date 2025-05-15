@@ -1,0 +1,419 @@
+Found 1 CSV files for training.
+Scenario 'scenario1': 1768 train, 220 val, 220 test.
+Total Training samples: 1768
+Total Validation samples: 220
+Total Testing samples: 220
+Using device: cuda:1
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/mmwave_gps_joint-01-15-152626.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/500], Train Loss: 0.0217, Val Loss: 0.0020
+Epoch Duration: 0h 12m 53s, Estimated Remaining Time: 107h 16m 33s
+Saved best model at epoch 1 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [2/500], Train Loss: 0.0091, Val Loss: 0.0019
+Epoch Duration: 0h 12m 44s, Estimated Remaining Time: 107h 23m 37s
+Saved best model at epoch 2 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [3/500], Train Loss: 0.0071, Val Loss: 0.0016
+Epoch Duration: 0h 13m 6s, Estimated Remaining Time: 108h 15m 24s
+Saved best model at epoch 3 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [4/500], Train Loss: 0.0056, Val Loss: 0.0017
+Epoch Duration: 0h 13m 35s, Estimated Remaining Time: 109h 38m 16s
+Epoch [5/500], Train Loss: 0.0046, Val Loss: 0.0015
+Epoch Duration: 0h 14m 2s, Estimated Remaining Time: 110h 42m 44s
+Saved best model at epoch 5 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 5 to ./checkpoints/mmwave_encoder_decoder_epoch_5.pth
+Epoch [6/500], Train Loss: 0.0038, Val Loss: 0.0015
+Epoch Duration: 0h 14m 2s, Estimated Remaining Time: 111h 44m 23s
+Epoch [7/500], Train Loss: 0.0033, Val Loss: 0.0014
+Epoch Duration: 0h 13m 52s, Estimated Remaining Time: 111h 52m 0s
+Saved best model at epoch 7 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [8/500], Train Loss: 0.0027, Val Loss: 0.0012
+Epoch Duration: 0h 13m 23s, Estimated Remaining Time: 111h 37m 40s
+Saved best model at epoch 8 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [9/500], Train Loss: 0.0023, Val Loss: 0.0012
+Epoch Duration: 0h 12m 57s, Estimated Remaining Time: 111h 0m 8s
+Epoch [10/500], Train Loss: 0.0020, Val Loss: 0.0010
+Epoch Duration: 0h 13m 25s, Estimated Remaining Time: 110h 39m 48s
+Saved best model at epoch 10 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 10 to ./checkpoints/mmwave_encoder_decoder_epoch_10.pth
+Epoch [11/500], Train Loss: 0.0018, Val Loss: 0.0009
+Epoch Duration: 0h 13m 40s, Estimated Remaining Time: 110h 47m 25s
+Saved best model at epoch 11 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [12/500], Train Loss: 0.0016, Val Loss: 0.0009
+Epoch Duration: 0h 13m 56s, Estimated Remaining Time: 110h 56m 53s
+Saved best model at epoch 12 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [13/500], Train Loss: 0.0014, Val Loss: 0.0009
+Epoch Duration: 0h 14m 7s, Estimated Remaining Time: 111h 9m 46s
+Saved best model at epoch 13 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [14/500], Train Loss: 0.0013, Val Loss: 0.0009
+Epoch Duration: 0h 14m 4s, Estimated Remaining Time: 111h 17m 4s
+Saved best model at epoch 14 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [15/500], Train Loss: 0.0012, Val Loss: 0.0008
+Epoch Duration: 0h 13m 16s, Estimated Remaining Time: 110h 55m 7s
+Saved best model at epoch 15 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 15 to ./checkpoints/mmwave_encoder_decoder_epoch_15.pth
+Epoch [16/500], Train Loss: 0.0012, Val Loss: 0.0008
+Epoch Duration: 0h 13m 12s, Estimated Remaining Time: 110h 34m 36s
+Saved best model at epoch 16 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [17/500], Train Loss: 0.0011, Val Loss: 0.0008
+Epoch Duration: 0h 12m 38s, Estimated Remaining Time: 109h 56m 28s
+Epoch [18/500], Train Loss: 0.0011, Val Loss: 0.0007
+Epoch Duration: 0h 12m 54s, Estimated Remaining Time: 109h 22m 50s
+Saved best model at epoch 18 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [19/500], Train Loss: 0.0010, Val Loss: 0.0007
+Epoch Duration: 0h 13m 5s, Estimated Remaining Time: 109h 1m 42s
+Epoch [20/500], Train Loss: 0.0009, Val Loss: 0.0007
+Epoch Duration: 0h 13m 9s, Estimated Remaining Time: 108h 37m 18s
+Saved best model at epoch 20 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 20 to ./checkpoints/mmwave_encoder_decoder_epoch_20.pth
+Epoch [21/500], Train Loss: 0.0009, Val Loss: 0.0007
+Epoch Duration: 0h 13m 30s, Estimated Remaining Time: 108h 28m 23s
+Saved best model at epoch 21 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [22/500], Train Loss: 0.0009, Val Loss: 0.0007
+Epoch Duration: 0h 12m 49s, Estimated Remaining Time: 108h 2m 49s
+Epoch [23/500], Train Loss: 0.0008, Val Loss: 0.0006
+Epoch Duration: 0h 12m 32s, Estimated Remaining Time: 107h 28m 14s
+Saved best model at epoch 23 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [24/500], Train Loss: 0.0008, Val Loss: 0.0006
+Epoch Duration: 0h 12m 33s, Estimated Remaining Time: 107h 0m 3s
+Saved best model at epoch 24 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [25/500], Train Loss: 0.0008, Val Loss: 0.0006
+Epoch Duration: 0h 13m 13s, Estimated Remaining Time: 106h 45m 41s
+Saved model at epoch 25 to ./checkpoints/mmwave_encoder_decoder_epoch_25.pth
+Epoch [26/500], Train Loss: 0.0008, Val Loss: 0.0006
+Epoch Duration: 0h 13m 16s, Estimated Remaining Time: 106h 29m 22s
+Saved best model at epoch 26 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [27/500], Train Loss: 0.0007, Val Loss: 0.0007
+Epoch Duration: 0h 12m 58s, Estimated Remaining Time: 106h 11m 9s
+Epoch [28/500], Train Loss: 0.0007, Val Loss: 0.0006
+Epoch Duration: 0h 13m 6s, Estimated Remaining Time: 105h 51m 42s
+Epoch [29/500], Train Loss: 0.0007, Val Loss: 0.0006
+Epoch Duration: 0h 13m 5s, Estimated Remaining Time: 105h 32m 23s
+Saved best model at epoch 29 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [30/500], Train Loss: 0.0007, Val Loss: 0.0006
+Epoch Duration: 0h 12m 42s, Estimated Remaining Time: 105h 10m 54s
+Saved best model at epoch 30 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 30 to ./checkpoints/mmwave_encoder_decoder_epoch_30.pth
+Epoch [31/500], Train Loss: 0.0007, Val Loss: 0.0006
+Epoch Duration: 0h 12m 39s, Estimated Remaining Time: 104h 50m 2s
+Epoch [32/500], Train Loss: 0.0007, Val Loss: 0.0005
+Epoch Duration: 0h 12m 50s, Estimated Remaining Time: 104h 28m 17s
+Saved best model at epoch 32 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [33/500], Train Loss: 0.0006, Val Loss: 0.0006
+Epoch Duration: 0h 13m 7s, Estimated Remaining Time: 104h 14m 9s
+Epoch [34/500], Train Loss: 0.0006, Val Loss: 0.0006
+Epoch Duration: 0h 13m 13s, Estimated Remaining Time: 103h 58m 28s
+Epoch [35/500], Train Loss: 0.0006, Val Loss: 0.0006
+Epoch Duration: 0h 13m 13s, Estimated Remaining Time: 103h 43m 0s
+Saved model at epoch 35 to ./checkpoints/mmwave_encoder_decoder_epoch_35.pth
+Epoch [36/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 12m 39s, Estimated Remaining Time: 103h 20m 53s
+Saved best model at epoch 36 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [37/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 12m 43s, Estimated Remaining Time: 103h 2m 27s
+Saved best model at epoch 37 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [38/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 12m 33s, Estimated Remaining Time: 102h 42m 9s
+Epoch [39/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 12m 7s, Estimated Remaining Time: 102h 14m 27s
+Saved best model at epoch 39 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [40/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 12m 39s, Estimated Remaining Time: 101h 55m 59s
+Saved model at epoch 40 to ./checkpoints/mmwave_encoder_decoder_epoch_40.pth
+Epoch [41/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 13m 1s, Estimated Remaining Time: 101h 40m 19s
+Epoch [42/500], Train Loss: 0.0006, Val Loss: 0.0005
+Epoch Duration: 0h 13m 20s, Estimated Remaining Time: 101h 27m 31s
+Epoch [43/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 13m 23s, Estimated Remaining Time: 101h 15m 17s
+Saved best model at epoch 43 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [44/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 38s, Estimated Remaining Time: 100h 57m 28s
+Epoch [45/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 27s, Estimated Remaining Time: 100h 35m 48s
+Saved model at epoch 45 to ./checkpoints/mmwave_encoder_decoder_epoch_45.pth
+Epoch [46/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 3s, Estimated Remaining Time: 100h 11m 3s
+Epoch [47/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 46s, Estimated Remaining Time: 99h 53m 22s
+Saved best model at epoch 47 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [48/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 13m 26s, Estimated Remaining Time: 99h 43m 59s
+Saved best model at epoch 48 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [49/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 13m 2s, Estimated Remaining Time: 99h 31m 14s
+Epoch [50/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 49s, Estimated Remaining Time: 99h 14m 19s
+Saved model at epoch 50 to ./checkpoints/mmwave_encoder_decoder_epoch_50.pth
+Epoch [51/500], Train Loss: 0.0005, Val Loss: 0.0004
+Epoch Duration: 0h 12m 18s, Estimated Remaining Time: 98h 53m 27s
+Saved best model at epoch 51 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [52/500], Train Loss: 0.0005, Val Loss: 0.0004
+Epoch Duration: 0h 12m 30s, Estimated Remaining Time: 98h 36m 4s
+Saved best model at epoch 52 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [53/500], Train Loss: 0.0005, Val Loss: 0.0005
+Epoch Duration: 0h 12m 45s, Estimated Remaining Time: 98h 20m 58s
+Epoch [54/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 13m 25s, Estimated Remaining Time: 98h 9m 39s
+Saved best model at epoch 54 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [55/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 13m 24s, Estimated Remaining Time: 98h 0m 23s
+Saved model at epoch 55 to ./checkpoints/mmwave_encoder_decoder_epoch_55.pth
+Epoch [56/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 36s, Estimated Remaining Time: 97h 42m 44s
+Epoch [57/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 31s, Estimated Remaining Time: 97h 24m 11s
+Saved best model at epoch 57 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [58/500], Train Loss: 0.0004, Val Loss: 0.0005
+Epoch Duration: 0h 12m 16s, Estimated Remaining Time: 97h 5m 38s
+Epoch [59/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 30s, Estimated Remaining Time: 96h 47m 24s
+Epoch [60/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 36s, Estimated Remaining Time: 96h 30m 10s
+Saved best model at epoch 60 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 60 to ./checkpoints/mmwave_encoder_decoder_epoch_60.pth
+Epoch [61/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 36s, Estimated Remaining Time: 96h 14m 55s
+Epoch [62/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 13m 9s, Estimated Remaining Time: 96h 1m 50s
+Saved best model at epoch 62 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [63/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 13m 6s, Estimated Remaining Time: 95h 49m 45s
+Epoch [64/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 13m 8s, Estimated Remaining Time: 95h 36m 28s
+Epoch [65/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 28s, Estimated Remaining Time: 95h 18m 43s
+Saved best model at epoch 65 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 65 to ./checkpoints/mmwave_encoder_decoder_epoch_65.pth
+Epoch [66/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 47s, Estimated Remaining Time: 95h 4m 55s
+Epoch [67/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 12s, Estimated Remaining Time: 94h 45m 41s
+Epoch [68/500], Train Loss: 0.0004, Val Loss: 0.0004
+Epoch Duration: 0h 12m 31s, Estimated Remaining Time: 94h 28m 40s
+Epoch [69/500], Train Loss: 0.0003, Val Loss: 0.0004
+Epoch Duration: 0h 12m 26s, Estimated Remaining Time: 94h 11m 20s
+Saved best model at epoch 69 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [70/500], Train Loss: 0.0003, Val Loss: 0.0004
+Epoch Duration: 0h 12m 47s, Estimated Remaining Time: 93h 57m 36s
+Saved best model at epoch 70 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 70 to ./checkpoints/mmwave_encoder_decoder_epoch_70.pth
+Epoch [71/500], Train Loss: 0.0003, Val Loss: 0.0004
+Epoch Duration: 0h 12m 58s, Estimated Remaining Time: 93h 45m 14s
+Saved best model at epoch 71 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [72/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 14m 2s, Estimated Remaining Time: 93h 39m 0s
+Saved best model at epoch 72 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [73/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 14m 55s, Estimated Remaining Time: 93h 37m 36s
+Epoch [74/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 14m 10s, Estimated Remaining Time: 93h 30m 20s
+Epoch [75/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 14m 46s, Estimated Remaining Time: 93h 26m 12s
+Saved best model at epoch 75 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 75 to ./checkpoints/mmwave_encoder_decoder_epoch_75.pth
+Epoch [76/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 14m 49s, Estimated Remaining Time: 93h 23m 55s
+Saved best model at epoch 76 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [77/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 35s, Estimated Remaining Time: 93h 25m 5s
+Epoch [78/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 43s, Estimated Remaining Time: 93h 30m 38s
+Saved best model at epoch 78 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [79/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 17m 3s, Estimated Remaining Time: 93h 38m 41s
+Saved best model at epoch 79 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [80/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 16s, Estimated Remaining Time: 93h 36m 44s
+Saved best model at epoch 80 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 80 to ./checkpoints/mmwave_encoder_decoder_epoch_80.pth
+Epoch [81/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 44s, Estimated Remaining Time: 93h 37m 37s
+Saved best model at epoch 81 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [82/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 44s, Estimated Remaining Time: 93h 42m 27s
+Epoch [83/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 58s, Estimated Remaining Time: 93h 46m 44s
+Saved best model at epoch 83 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [84/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 51s, Estimated Remaining Time: 93h 46m 9s
+Saved best model at epoch 84 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [85/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 49s, Estimated Remaining Time: 93h 45m 8s
+Saved model at epoch 85 to ./checkpoints/mmwave_encoder_decoder_epoch_85.pth
+Epoch [86/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 17m 0s, Estimated Remaining Time: 93h 48m 36s
+Epoch [87/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 17m 20s, Estimated Remaining Time: 93h 52m 49s
+Epoch [88/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 46s, Estimated Remaining Time: 93h 53m 53s
+Epoch [89/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 51s, Estimated Remaining Time: 93h 50m 19s
+Saved best model at epoch 89 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [90/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 20s, Estimated Remaining Time: 93h 49m 54s
+Saved model at epoch 90 to ./checkpoints/mmwave_encoder_decoder_epoch_90.pth
+Epoch [91/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 53s, Estimated Remaining Time: 93h 50m 37s
+Epoch [92/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 17m 22s, Estimated Remaining Time: 93h 52m 53s
+Epoch [93/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 16m 21s, Estimated Remaining Time: 93h 50m 16s
+Epoch [94/500], Train Loss: 0.0003, Val Loss: 0.0003
+Epoch Duration: 0h 15m 55s, Estimated Remaining Time: 93h 45m 30s
+Epoch [95/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 16m 35s, Estimated Remaining Time: 93h 43m 20s
+Saved best model at epoch 95 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 95 to ./checkpoints/mmwave_encoder_decoder_epoch_95.pth
+Epoch [96/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 17m 5s, Estimated Remaining Time: 93h 44m 17s
+Saved best model at epoch 96 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [97/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 17m 6s, Estimated Remaining Time: 93h 44m 38s
+Epoch [98/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 16m 8s, Estimated Remaining Time: 93h 39m 40s
+Epoch [99/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 15m 46s, Estimated Remaining Time: 93h 32m 57s
+Epoch [100/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 16m 39s, Estimated Remaining Time: 93h 29m 37s
+Saved model at epoch 100 to ./checkpoints/mmwave_encoder_decoder_epoch_100.pth
+Epoch [101/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 17m 22s, Estimated Remaining Time: 93h 29m 10s
+Saved best model at epoch 101 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [102/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 17m 16s, Estimated Remaining Time: 93h 28m 43s
+Epoch [103/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 8s, Estimated Remaining Time: 93h 22m 34s
+Epoch [104/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 15m 52s, Estimated Remaining Time: 93h 15m 10s
+Epoch [105/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 17m 5s, Estimated Remaining Time: 93h 12m 11s
+Saved model at epoch 105 to ./checkpoints/mmwave_encoder_decoder_epoch_105.pth
+Epoch [106/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 17m 22s, Estimated Remaining Time: 93h 10m 16s
+Epoch [107/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 47s, Estimated Remaining Time: 93h 5m 37s
+Saved best model at epoch 107 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [108/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 54s, Estimated Remaining Time: 92h 58m 47s
+Epoch [109/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 4s, Estimated Remaining Time: 92h 51m 9s
+Saved best model at epoch 109 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [110/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 56s, Estimated Remaining Time: 92h 47m 19s
+Saved model at epoch 110 to ./checkpoints/mmwave_encoder_decoder_epoch_110.pth
+Epoch [111/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 17m 33s, Estimated Remaining Time: 92h 44m 43s
+Saved best model at epoch 111 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [112/500], Train Loss: 0.0002, Val Loss: 0.0003
+Epoch Duration: 0h 17m 29s, Estimated Remaining Time: 92h 42m 10s
+Epoch [113/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 9s, Estimated Remaining Time: 92h 34m 5s
+Epoch [114/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 11s, Estimated Remaining Time: 92h 25m 58s
+Epoch [115/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 29s, Estimated Remaining Time: 92h 18m 42s
+Saved model at epoch 115 to ./checkpoints/mmwave_encoder_decoder_epoch_115.pth
+Epoch [116/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 45s, Estimated Remaining Time: 92h 12m 21s
+Epoch [117/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 47s, Estimated Remaining Time: 92h 5m 46s
+Epoch 00117: reducing learning rate of group 0 to 5.0000e-05.
+Epoch [118/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 38s, Estimated Remaining Time: 91h 58m 30s
+Saved best model at epoch 118 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [119/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 49s, Estimated Remaining Time: 91h 49m 5s
+Saved best model at epoch 119 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [120/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 22s, Estimated Remaining Time: 91h 38m 11s
+Saved model at epoch 120 to ./checkpoints/mmwave_encoder_decoder_epoch_120.pth
+Epoch [121/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 27s, Estimated Remaining Time: 91h 30m 8s
+Saved best model at epoch 121 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [122/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 25s, Estimated Remaining Time: 91h 22m 14s
+Epoch [123/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 51s, Estimated Remaining Time: 91h 14m 56s
+Epoch [124/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 49s, Estimated Remaining Time: 91h 7m 24s
+Saved best model at epoch 124 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [125/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 13s, Estimated Remaining Time: 90h 58m 29s
+Saved best model at epoch 125 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 125 to ./checkpoints/mmwave_encoder_decoder_epoch_125.pth
+Epoch [126/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 42s, Estimated Remaining Time: 90h 48m 7s
+Epoch [127/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 24s, Estimated Remaining Time: 90h 36m 0s
+Epoch [128/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 5s, Estimated Remaining Time: 90h 25m 50s
+Epoch [129/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 40s, Estimated Remaining Time: 90h 17m 16s
+Saved best model at epoch 129 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [130/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 41s, Estimated Remaining Time: 90h 9m 10s
+Saved model at epoch 130 to ./checkpoints/mmwave_encoder_decoder_epoch_130.pth
+Epoch [131/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 11s, Estimated Remaining Time: 89h 59m 8s
+Epoch [132/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 33s, Estimated Remaining Time: 89h 47m 5s
+Epoch [133/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 51s, Estimated Remaining Time: 89h 35m 48s
+Epoch [134/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 47s, Estimated Remaining Time: 89h 26m 59s
+Epoch [135/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 41s, Estimated Remaining Time: 89h 17m 49s
+Epoch 00135: reducing learning rate of group 0 to 2.5000e-05.
+Saved model at epoch 135 to ./checkpoints/mmwave_encoder_decoder_epoch_135.pth
+Epoch [136/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 37s, Estimated Remaining Time: 89h 5m 48s
+Saved best model at epoch 136 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [137/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 25s, Estimated Remaining Time: 88h 53m 37s
+Epoch [138/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 10s, Estimated Remaining Time: 88h 42m 49s
+Epoch [139/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 37s, Estimated Remaining Time: 88h 33m 7s
+Saved best model at epoch 139 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [140/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 17s, Estimated Remaining Time: 88h 22m 59s
+Saved model at epoch 140 to ./checkpoints/mmwave_encoder_decoder_epoch_140.pth
+Epoch [141/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 41s, Estimated Remaining Time: 88h 10m 51s
+Epoch [142/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 37s, Estimated Remaining Time: 87h 58m 21s
+Epoch [143/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 45s, Estimated Remaining Time: 87h 46m 7s
+Saved best model at epoch 143 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Epoch [144/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 38s, Estimated Remaining Time: 87h 36m 34s
+Epoch [145/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 40s, Estimated Remaining Time: 87h 26m 29s
+Saved best model at epoch 145 to ./checkpoints/mmwave_encoder_decoder_best.pth
+Saved model at epoch 145 to ./checkpoints/mmwave_encoder_decoder_epoch_145.pth
+Epoch [146/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 3s, Estimated Remaining Time: 87h 15m 29s
+Epoch [147/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 39s, Estimated Remaining Time: 87h 2m 46s
+Epoch [148/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 36s, Estimated Remaining Time: 86h 49m 54s
+Epoch [149/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 35s, Estimated Remaining Time: 86h 36m 58s
+Epoch [150/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 42s, Estimated Remaining Time: 86h 24m 16s
+Saved model at epoch 150 to ./checkpoints/mmwave_encoder_decoder_epoch_150.pth
+Epoch [151/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 38s, Estimated Remaining Time: 86h 11m 28s
+Epoch 00151: reducing learning rate of group 0 to 1.2500e-05.
+Epoch [152/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 29s, Estimated Remaining Time: 86h 0m 29s
+Epoch [153/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 16m 45s, Estimated Remaining Time: 85h 50m 2s
+Epoch [154/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 57s, Estimated Remaining Time: 85h 37m 42s
+Epoch [155/500], Train Loss: 0.0002, Val Loss: 0.0002
+Epoch Duration: 0h 15m 45s, Estimated Remaining Time: 85h 24m 53s
+Early stopping at epoch 155
+Loaded best model for testing.
+Test Loss (MSE): 0.0002

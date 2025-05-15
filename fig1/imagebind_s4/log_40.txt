@@ -1,0 +1,17 @@
+=============================
+开始评估模型1：./fig1/imagebind_s4/multimodal_encoder_decoder_epoch_40.pth
+/home/wzj/anaconda3/envs/bind_origin/lib/python3.9/site-packages/torchvision/transforms/_functional_video.py:6: UserWarning: The 'torchvision.transforms._functional_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms.functional' module instead.
+  warnings.warn(
+/home/wzj/anaconda3/envs/bind_origin/lib/python3.9/site-packages/torchvision/transforms/_transforms_video.py:22: UserWarning: The 'torchvision.transforms._transforms_video' module is deprecated since 0.12 and will be removed in the future. Please use the 'torchvision.transforms' module instead.
+  warnings.warn(
+Found 4 CSV files for testing.
+Total Training samples: 5944
+Total Validation samples: 743
+Total Testing samples: 743
+Loaded state_dict from ./fig1/imagebind_s4/multimodal_encoder_decoder_epoch_40.pth
+Encoder weights loaded successfully.
+Testing:   0%|          | 0/12 [00:00<?, ?it/s]Testing:   8%|▊         | 1/12 [00:47<08:37, 47.01s/it]Testing:  17%|█▋        | 2/12 [00:52<03:46, 22.67s/it]Testing:  25%|██▌       | 3/12 [00:58<02:14, 14.89s/it]Testing:  33%|███▎      | 4/12 [01:03<01:29, 11.25s/it]Testing:  42%|████▏     | 5/12 [01:11<01:09,  9.92s/it]Testing:  50%|█████     | 6/12 [01:17<00:51,  8.56s/it]Testing:  58%|█████▊    | 7/12 [01:23<00:38,  7.63s/it]Testing:  67%|██████▋   | 8/12 [01:28<00:28,  7.04s/it]Testing:  75%|███████▌  | 9/12 [01:36<00:21,  7.25s/it]Testing:  83%|████████▎ | 10/12 [01:42<00:13,  6.80s/it]Testing:  92%|█████████▏| 11/12 [01:48<00:06,  6.50s/it]Testing: 100%|██████████| 12/12 [01:51<00:00,  5.63s/it]                                                        Test Loss (MSE): 0.0017
+Test Loss (NMSE): 0.2572
+Accuracy@1: 0.2983
+Accuracy@5: 0.6163
+=============================

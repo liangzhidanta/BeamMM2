@@ -1,0 +1,159 @@
+Found 6 CSV files for training.
+Total Training samples: 8286
+Total Validation samples: 1035
+Total Testing samples: 1037
+Using device: cuda
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/vision_s6.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/50], Train Loss: 0.0271, Val Loss: 0.0060
+Epoch Duration: 0h 27m 35s, Estimated Remaining Time: 22h 32m 12s
+Saved best model at epoch 1 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [2/50], Train Loss: 0.0128, Val Loss: 0.0059
+Epoch Duration: 0h 27m 27s, Estimated Remaining Time: 22h 3m 0s
+Saved best model at epoch 2 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [3/50], Train Loss: 0.0102, Val Loss: 0.0055
+Epoch Duration: 0h 28m 10s, Estimated Remaining Time: 21h 49m 10s
+Saved best model at epoch 3 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [4/50], Train Loss: 0.0085, Val Loss: 0.0054
+Epoch Duration: 0h 27m 45s, Estimated Remaining Time: 21h 23m 7s
+Saved best model at epoch 4 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [5/50], Train Loss: 0.0073, Val Loss: 0.0049
+Epoch Duration: 0h 28m 36s, Estimated Remaining Time: 21h 4m 19s
+Saved best model at epoch 5 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 5 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_5.pth
+Epoch [6/50], Train Loss: 0.0064, Val Loss: 0.0047
+Epoch Duration: 0h 29m 51s, Estimated Remaining Time: 20h 51m 51s
+Saved best model at epoch 6 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [7/50], Train Loss: 0.0057, Val Loss: 0.0042
+Epoch Duration: 0h 27m 43s, Estimated Remaining Time: 20h 25m 8s
+Saved best model at epoch 7 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [8/50], Train Loss: 0.0052, Val Loss: 0.0041
+Epoch Duration: 0h 27m 49s, Estimated Remaining Time: 19h 54m 33s
+Saved best model at epoch 8 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [9/50], Train Loss: 0.0048, Val Loss: 0.0038
+Epoch Duration: 0h 27m 14s, Estimated Remaining Time: 19h 21m 54s
+Saved best model at epoch 9 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [10/50], Train Loss: 0.0045, Val Loss: 0.0037
+Epoch Duration: 0h 27m 52s, Estimated Remaining Time: 18h 52m 46s
+Saved best model at epoch 10 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 10 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_10.pth
+Epoch [11/50], Train Loss: 0.0042, Val Loss: 0.0036
+Epoch Duration: 0h 27m 8s, Estimated Remaining Time: 18h 21m 32s
+Saved best model at epoch 11 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [12/50], Train Loss: 0.0040, Val Loss: 0.0034
+Epoch Duration: 0h 28m 9s, Estimated Remaining Time: 17h 53m 57s
+Saved best model at epoch 12 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [13/50], Train Loss: 0.0039, Val Loss: 0.0034
+Epoch Duration: 0h 27m 28s, Estimated Remaining Time: 17h 24m 23s
+Saved best model at epoch 13 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [14/50], Train Loss: 0.0037, Val Loss: 0.0032
+Epoch Duration: 0h 30m 55s, Estimated Remaining Time: 17h 3m 43s
+Saved best model at epoch 14 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [15/50], Train Loss: 0.0037, Val Loss: 0.0033
+Epoch Duration: 0h 28m 39s, Estimated Remaining Time: 16h 36m 25s
+Saved model at epoch 15 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_15.pth
+Epoch [16/50], Train Loss: 0.0035, Val Loss: 0.0030
+Epoch Duration: 0h 30m 22s, Estimated Remaining Time: 16h 12m 9s
+Saved best model at epoch 16 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [17/50], Train Loss: 0.0034, Val Loss: 0.0030
+Epoch Duration: 0h 26m 51s, Estimated Remaining Time: 15h 40m 43s
+Saved best model at epoch 17 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [18/50], Train Loss: 0.0033, Val Loss: 0.0028
+Epoch Duration: 0h 27m 55s, Estimated Remaining Time: 15h 11m 39s
+Saved best model at epoch 18 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [19/50], Train Loss: 0.0032, Val Loss: 0.0028
+Epoch Duration: 0h 27m 4s, Estimated Remaining Time: 14h 41m 21s
+Saved best model at epoch 19 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [20/50], Train Loss: 0.0031, Val Loss: 0.0030
+Epoch Duration: 0h 27m 33s, Estimated Remaining Time: 14h 11m 59s
+Saved model at epoch 20 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_20.pth
+Epoch [21/50], Train Loss: 0.0030, Val Loss: 0.0027
+Epoch Duration: 0h 27m 32s, Estimated Remaining Time: 13h 42m 30s
+Saved best model at epoch 21 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [22/50], Train Loss: 0.0029, Val Loss: 0.0026
+Epoch Duration: 0h 27m 55s, Estimated Remaining Time: 13h 13m 53s
+Saved best model at epoch 22 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [23/50], Train Loss: 0.0028, Val Loss: 0.0024
+Epoch Duration: 0h 27m 23s, Estimated Remaining Time: 12h 44m 43s
+Saved best model at epoch 23 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [24/50], Train Loss: 0.0028, Val Loss: 0.0024
+Epoch Duration: 0h 27m 35s, Estimated Remaining Time: 12h 15m 52s
+Saved best model at epoch 24 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [25/50], Train Loss: 0.0027, Val Loss: 0.0023
+Epoch Duration: 0h 27m 44s, Estimated Remaining Time: 11h 47m 22s
+Saved best model at epoch 25 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 25 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_25.pth
+Epoch [26/50], Train Loss: 0.0026, Val Loss: 0.0023
+Epoch Duration: 0h 27m 14s, Estimated Remaining Time: 11h 18m 28s
+Saved best model at epoch 26 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [27/50], Train Loss: 0.0026, Val Loss: 0.0022
+Epoch Duration: 0h 27m 58s, Estimated Remaining Time: 10h 50m 10s
+Saved best model at epoch 27 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [28/50], Train Loss: 0.0025, Val Loss: 0.0022
+Epoch Duration: 0h 27m 8s, Estimated Remaining Time: 10h 21m 14s
+Epoch [29/50], Train Loss: 0.0024, Val Loss: 0.0021
+Epoch Duration: 0h 28m 14s, Estimated Remaining Time: 9h 53m 0s
+Saved best model at epoch 29 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [30/50], Train Loss: 0.0023, Val Loss: 0.0021
+Epoch Duration: 0h 27m 14s, Estimated Remaining Time: 9h 24m 19s
+Saved model at epoch 30 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_30.pth
+Epoch [31/50], Train Loss: 0.0023, Val Loss: 0.0020
+Epoch Duration: 0h 28m 8s, Estimated Remaining Time: 8h 56m 5s
+Saved best model at epoch 31 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [32/50], Train Loss: 0.0022, Val Loss: 0.0021
+Epoch Duration: 0h 27m 25s, Estimated Remaining Time: 8h 27m 35s
+Epoch [33/50], Train Loss: 0.0022, Val Loss: 0.0019
+Epoch Duration: 0h 28m 1s, Estimated Remaining Time: 7h 59m 17s
+Saved best model at epoch 33 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [34/50], Train Loss: 0.0021, Val Loss: 0.0019
+Epoch Duration: 0h 27m 48s, Estimated Remaining Time: 7h 31m 4s
+Epoch [35/50], Train Loss: 0.0021, Val Loss: 0.0018
+Epoch Duration: 0h 28m 7s, Estimated Remaining Time: 7h 2m 51s
+Saved best model at epoch 35 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 35 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_35.pth
+Epoch [36/50], Train Loss: 0.0020, Val Loss: 0.0017
+Epoch Duration: 0h 27m 13s, Estimated Remaining Time: 6h 34m 24s
+Saved best model at epoch 36 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [37/50], Train Loss: 0.0020, Val Loss: 0.0017
+Epoch Duration: 0h 27m 58s, Estimated Remaining Time: 6h 6m 16s
+Saved best model at epoch 37 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [38/50], Train Loss: 0.0019, Val Loss: 0.0018
+Epoch Duration: 0h 27m 32s, Estimated Remaining Time: 5h 38m 0s
+Epoch [39/50], Train Loss: 0.0019, Val Loss: 0.0017
+Epoch Duration: 0h 27m 45s, Estimated Remaining Time: 5h 9m 43s
+Saved best model at epoch 39 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [40/50], Train Loss: 0.0018, Val Loss: 0.0016
+Epoch Duration: 0h 27m 37s, Estimated Remaining Time: 4h 41m 30s
+Saved best model at epoch 40 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 40 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_40.pth
+Epoch [41/50], Train Loss: 0.0018, Val Loss: 0.0017
+Epoch Duration: 0h 27m 34s, Estimated Remaining Time: 4h 13m 18s
+Epoch [42/50], Train Loss: 0.0018, Val Loss: 0.0016
+Epoch Duration: 0h 27m 49s, Estimated Remaining Time: 3h 45m 5s
+Saved best model at epoch 42 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [43/50], Train Loss: 0.0017, Val Loss: 0.0015
+Epoch Duration: 0h 27m 36s, Estimated Remaining Time: 3h 16m 55s
+Saved best model at epoch 43 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [44/50], Train Loss: 0.0017, Val Loss: 0.0015
+Epoch Duration: 0h 27m 23s, Estimated Remaining Time: 2h 48m 43s
+Saved best model at epoch 44 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [45/50], Train Loss: 0.0017, Val Loss: 0.0016
+Epoch Duration: 0h 25m 35s, Estimated Remaining Time: 2h 20m 21s
+Saved model at epoch 45 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_45.pth
+Epoch [46/50], Train Loss: 0.0017, Val Loss: 0.0014
+Epoch Duration: 0h 26m 38s, Estimated Remaining Time: 1h 52m 10s
+Saved best model at epoch 46 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [47/50], Train Loss: 0.0016, Val Loss: 0.0014
+Epoch Duration: 0h 23m 55s, Estimated Remaining Time: 1h 23m 52s
+Saved best model at epoch 47 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Epoch [48/50], Train Loss: 0.0016, Val Loss: 0.0014
+Epoch Duration: 0h 22m 35s, Estimated Remaining Time: 0h 55m 42s
+Epoch [49/50], Train Loss: 0.0016, Val Loss: 0.0015
+Epoch Duration: 0h 23m 44s, Estimated Remaining Time: 0h 27m 46s
+Epoch [50/50], Train Loss: 0.0015, Val Loss: 0.0014
+Epoch Duration: 0h 22m 49s, Estimated Remaining Time: 0h 0m 0s
+Saved best model at epoch 50 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_best.pth
+Saved model at epoch 50 to ./fig1/imagebind_s6_b/mmwave_encoder_decoder_epoch_50.pth
+Loaded best model for testing.
+Test Loss (MSE): 0.0014

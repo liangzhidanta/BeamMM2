@@ -1,0 +1,89 @@
+Found 4 CSV files for training.
+Total Training samples: 3012
+Total Validation samples: 376
+Total Testing samples: 377
+Using device: cuda
+Loaded state_dict from /home/wzj/BeamMM/checkpoints/mmwave_gps_joint_s4.pth
+Encoder weights loaded successfully.
+Using MSELoss as the loss function.
+Epoch [1/50], Train Loss: 0.0441, Val Loss: 0.0065
+Epoch Duration: 0h 7m 23s, Estimated Remaining Time: 6h 2m 15s
+Saved best model at epoch 1 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [2/50], Train Loss: 0.0169, Val Loss: 0.0072
+Epoch Duration: 0h 8m 35s, Estimated Remaining Time: 6h 24m 46s
+Epoch [3/50], Train Loss: 0.0149, Val Loss: 0.0061
+Epoch Duration: 0h 8m 35s, Estimated Remaining Time: 6h 25m 42s
+Saved best model at epoch 3 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [4/50], Train Loss: 0.0134, Val Loss: 0.0060
+Epoch Duration: 0h 8m 26s, Estimated Remaining Time: 6h 23m 1s
+Saved best model at epoch 4 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [5/50], Train Loss: 0.0119, Val Loss: 0.0057
+Epoch Duration: 0h 8m 26s, Estimated Remaining Time: 6h 17m 53s
+Saved best model at epoch 5 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Saved model at epoch 5 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_epoch_5.pth
+Epoch [6/50], Train Loss: 0.0110, Val Loss: 0.0068
+Epoch Duration: 0h 8m 36s, Estimated Remaining Time: 6h 13m 15s
+Epoch [7/50], Train Loss: 0.0104, Val Loss: 0.0062
+Epoch Duration: 0h 8m 57s, Estimated Remaining Time: 6h 7m 39s
+Epoch [8/50], Train Loss: 0.0093, Val Loss: 0.0055
+Epoch Duration: 0h 8m 46s, Estimated Remaining Time: 6h 0m 18s
+Saved best model at epoch 8 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [9/50], Train Loss: 0.0084, Val Loss: 0.0053
+Epoch Duration: 0h 8m 31s, Estimated Remaining Time: 5h 52m 36s
+Saved best model at epoch 9 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [10/50], Train Loss: 0.0079, Val Loss: 0.0050
+Epoch Duration: 0h 8m 30s, Estimated Remaining Time: 5h 44m 42s
+Saved best model at epoch 10 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Saved model at epoch 10 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_epoch_10.pth
+Epoch [11/50], Train Loss: 0.0074, Val Loss: 0.0048
+Epoch Duration: 0h 8m 28s, Estimated Remaining Time: 5h 36m 33s
+Saved best model at epoch 11 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [12/50], Train Loss: 0.0070, Val Loss: 0.0055
+Epoch Duration: 0h 8m 26s, Estimated Remaining Time: 5h 28m 5s
+Epoch [13/50], Train Loss: 0.0065, Val Loss: 0.0044
+Epoch Duration: 0h 8m 36s, Estimated Remaining Time: 5h 19m 21s
+Saved best model at epoch 13 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [14/50], Train Loss: 0.0062, Val Loss: 0.0042
+Epoch Duration: 0h 8m 28s, Estimated Remaining Time: 5h 10m 55s
+Saved best model at epoch 14 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [15/50], Train Loss: 0.0059, Val Loss: 0.0051
+Epoch Duration: 0h 8m 27s, Estimated Remaining Time: 5h 2m 23s
+Saved model at epoch 15 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_epoch_15.pth
+Epoch [16/50], Train Loss: 0.0058, Val Loss: 0.0043
+Epoch Duration: 0h 17m 56s, Estimated Remaining Time: 5h 13m 36s
+Epoch [17/50], Train Loss: 0.0055, Val Loss: 0.0047
+Epoch Duration: 0h 8m 52s, Estimated Remaining Time: 5h 3m 41s
+Epoch [18/50], Train Loss: 0.0053, Val Loss: 0.0039
+Epoch Duration: 0h 8m 54s, Estimated Remaining Time: 4h 53m 58s
+Saved best model at epoch 18 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [19/50], Train Loss: 0.0051, Val Loss: 0.0039
+Epoch Duration: 0h 8m 36s, Estimated Remaining Time: 4h 44m 17s
+Saved best model at epoch 19 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [20/50], Train Loss: 0.0050, Val Loss: 0.0039
+Epoch Duration: 0h 8m 28s, Estimated Remaining Time: 4h 34m 26s
+Saved model at epoch 20 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_epoch_20.pth
+Epoch [21/50], Train Loss: 0.0048, Val Loss: 0.0037
+Epoch Duration: 0h 8m 36s, Estimated Remaining Time: 4h 24m 35s
+Saved best model at epoch 21 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [22/50], Train Loss: 0.0047, Val Loss: 0.0036
+Epoch Duration: 0h 8m 44s, Estimated Remaining Time: 4h 15m 17s
+Saved best model at epoch 22 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [23/50], Train Loss: 0.0045, Val Loss: 0.0038
+Epoch Duration: 0h 8m 54s, Estimated Remaining Time: 4h 6m 12s
+Epoch [24/50], Train Loss: 0.0044, Val Loss: 0.0037
+Epoch Duration: 0h 8m 52s, Estimated Remaining Time: 3h 56m 49s
+Epoch [25/50], Train Loss: 0.0043, Val Loss: 0.0034
+Epoch Duration: 0h 8m 49s, Estimated Remaining Time: 3h 47m 25s
+Saved best model at epoch 25 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Saved model at epoch 25 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_epoch_25.pth
+Epoch [26/50], Train Loss: 0.0042, Val Loss: 0.0036
+Epoch Duration: 0h 8m 42s, Estimated Remaining Time: 3h 38m 12s
+Epoch [27/50], Train Loss: 0.0041, Val Loss: 0.0038
+Epoch Duration: 0h 8m 47s, Estimated Remaining Time: 3h 28m 51s
+Epoch [28/50], Train Loss: 0.0039, Val Loss: 0.0032
+Epoch Duration: 0h 8m 46s, Estimated Remaining Time: 3h 19m 32s
+Saved best model at epoch 28 to ./fig1_compare/imagebind_s4/multimodal_encoder_decoder_best.pth
+Epoch [29/50], Train Loss: 0.0039, Val Loss: 0.0033
+Epoch Duration: 0h 8m 35s, Estimated Remaining Time: 3h 10m 17s
+Epoch [30/50], Train Loss: 0.0038, Val Loss: 0.0034
+Epoch Duration: 0h 8m 42s, Estimated Remaining Time: 3h 0m 59s

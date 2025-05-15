@@ -1,0 +1,41 @@
+=============================
+开始评估模型1：./checkpoints_scaling_model1/multimodal_encoder_decoder_best.pth
+Found 1 CSV files for testing.
+Total Training samples: 4009
+Total Validation samples: 501
+Total Testing samples: 502
+Loaded state_dict from ./checkpoints_scaling_model1/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Test Loss (MSE): 0.0030
+Test Loss (NMSE): 0.2411
+Accuracy@1: 0.2384
+Accuracy@5: 0.1645
+=============================
+开始评估模型2：./checkpoints_scaling_model2/multimodal_encoder_decoder_best.pth
+Found 1 CSV files for testing.
+Total Training samples: 4009
+Total Validation samples: 501
+Total Testing samples: 502
+Loaded state_dict from ./checkpoints_scaling_model2/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Test Loss (MSE): 0.0030
+Test Loss (NMSE): 0.2398
+Accuracy@1: 0.2802
+Accuracy@5: 0.1815
+=============================
+所有模型训练和评估任务已完成！
+=============================
+=============================
+=============================
+开始评估模型3：./checkpoints_scaling_model3/multimodal_encoder_decoder_best.pth
+Found 1 CSV files for testing.
+Total Training samples: 4009
+Total Validation samples: 501
+Total Testing samples: 502
+Loaded state_dict from ./checkpoints_scaling_model3/multimodal_encoder_decoder_best.pth
+Encoder weights loaded successfully.
+Test Loss (MSE): 0.0031
+Test Loss (NMSE): 0.2447
+Accuracy@1: 0.2351
+Accuracy@5: 0.1631
+所有模型训练和评估任务已完成！
