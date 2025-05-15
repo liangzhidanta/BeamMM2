@@ -48,11 +48,50 @@ class NMSELoss(nn.Module):
             return torch.tensor(float('inf')).to(output.device)
         return mse / var
 
+#---------新增topkloss---------
+import torch.nn.functional as F
+
+class TopkLoss(nn.Module):
+    def __init__(self, k=1, reduction='mean'):
+        super().__init__()
+        self.k = k
+        self.reduction = reduction
+
+    def forward(self, output, target):
+        """
+        Args:
+            output : [B, T, C] 模型输出的logits（未归一化）
+            target : [B, T, C] one-hot编码 或 [B, T] 类别索引
+        """
+        # 转换target为类别索引
+        if target.dim() == 3:
+            target = torch.argmax(target, dim=-1)  # [B, T]
+        
+        B, T, C = output.shape
+        output_flat = output.view(B*T, C)  # [B*T, C]
+        target_flat = target.contiguous().view(-1)  # [B*T]
+        
+        # 计算Top-k正确性
+        _, topk_indices = torch.topk(output_flat, self.k, dim=1)  # [B*T, k]
+        correct = topk_indices.eq(target_flat.unsqueeze(1)).any(dim=1)  # [B*T]
+        
+        # 计算损失（仅惩罚Top-k错误的样本）
+        loss = F.cross_entropy(output_flat, target_flat, reduction='none')  # [B*T]
+        masked_loss = loss * ~correct  # 错误样本保留损失
+        
+        if self.reduction == 'mean':
+            return masked_loss.mean()
+        elif self.reduction == 'sum':
+            return masked_loss.sum()
+        return masked_loss
+
+#------------------------------
+
 # 解析命令行参数
 def parse_args():
     parser = argparse.ArgumentParser(description='Train MultiModalEncoderDecoderModel with MSE or NMSE loss.')
-    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE'], default='MSE',
-                        help='选择损失函数类型：MSE 或 NMSE。默认是 MSE。')
+    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK'], default='MSE',
+                        help='选择损失函数类型：MSE、NMSE 或 TOPK。默认是 MSE。')
     parser.add_argument('--epochs', type=int, default=50, help='训练的总轮数。默认是50。')
     parser.add_argument('--batch_size', type=int, default=16, help='批量大小。默认是16。')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='学习率。默认是1e-4。')
@@ -292,6 +331,11 @@ def main():
     elif args.loss == 'NMSE':
         criterion = NMSELoss()
         print("Using NMSELoss as the loss function.")
+    #----------添加topkloss----------
+    elif args.loss == 'topkloss':
+        criterion = TopkLoss(k=3, reduction='mean')
+        print("Using TopkLoss as the loss function.")
+    #--------------------------------
     else:
         raise ValueError(f"Unsupported loss type: {args.loss}")
 
