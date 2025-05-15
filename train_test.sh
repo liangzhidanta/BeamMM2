@@ -24,13 +24,13 @@ PATIENCE=5
 # 模型1相关参数设置（加载预训练编码器1）
 ###############################
 CHECKPOINT_DIR1="./fig1/imagebind_s6"
-PRETRAINED_ENCODER_PATH1="/home/wzj/BeamMM/checkpoints/vision_s6.pth"  # MMWAVE ANCHOR
+PRETRAINED_ENCODER_PATH1="/data2/wzj/BeamMM_checkpoints/vision_s6.pth"  # MMWAVE ANCHOR
 
 ###############################
 # 模型2相关参数设置（加载预训练编码器2）
 ###############################
 CHECKPOINT_DIR2="./checkpoints_model2"
-PRETRAINED_ENCODER_PATH2="/groups/g900403/home/share/wzj/BeamMM/checkpoints/mmwave_gps_joint-01-15-152626.pth"   # VISION ANCHOR
+PRETRAINED_ENCODER_PATH2="/data2/wzj/BeamMM_checkpoints/mmwave_gps_joint-01-15-152626.pth"   # VISION ANCHOR
 
 ###############################
 # 确保保存检查点的目录存在

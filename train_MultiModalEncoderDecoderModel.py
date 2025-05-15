@@ -140,7 +140,7 @@ def main():
     ])
 
     # 定义数据集路径
-    dataset_path = [f'/new_disk/yy/DeepSensePre/Data_raw/scenario{i}/' for i in range(args.dataset_start_idx, args.dataset_end_idx)]  # scenario1 ~ scenario8
+    dataset_path = [f'/data2/wzj/Datasets/DeepSense/scenario{i}/' for i in range(args.dataset_start_idx, args.dataset_end_idx)]  # scenario1 ~ scenario8
     # dataset_path = [f'/new_disk/yy/DeepSensePre/Data_raw/scenario{i}/' for i in range(2, 3)]  # scenario1 ~ scenario1
     data_csv_paths = []
     for path in dataset_path:
