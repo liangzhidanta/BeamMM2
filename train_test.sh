@@ -14,7 +14,7 @@ export CUDA_VISIBLE_DEVICES=1
 ###############################
 # 公共参数设置
 ###############################
-LOSS="MSE"
+LOSS="TOPK"
 EPOCHS=50
 BATCH_SIZE=64
 LEARNING_RATE=1e-4

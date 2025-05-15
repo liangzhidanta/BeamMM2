@@ -332,7 +332,7 @@ def main():
         criterion = NMSELoss()
         print("Using NMSELoss as the loss function.")
     #----------添加topkloss----------
-    elif args.loss == 'topkloss':
+    elif args.loss == 'TOPK':
         criterion = TopkLoss(k=3, reduction='mean')
         print("Using TopkLoss as the loss function.")
     #--------------------------------
