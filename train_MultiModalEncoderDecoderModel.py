@@ -62,6 +62,9 @@ class TopkLoss(nn.Module):
         Args:
             output : [B, T, C] 模型输出的logits（未归一化）
             target : [B, T, C] one-hot编码 或 [B, T] 类别索引
+            B = Batch Size        批量大小（数据加载时设置的batch_size）
+            T = Sequence Length   输出序列的时间步数（output_length=3）
+            C = Num Classes       类别数量（64个离散目标类别）
         """
         # 转换target为类别索引
         if target.dim() == 3:
@@ -428,6 +431,12 @@ def main():
 
         avg_loss = epoch_loss / len(data_loader)
         return avg_loss
+    def calculate_accuracy(output, target, k=3):
+        with torch.no_grad():
+            _, pred = output.topk(k, dim=-1)  # [B, T, k]
+            correct = pred.eq(target.unsqueeze(-1)).any(dim=-1)
+            return correct.float().mean()
+
 
     # 6. 训练循环
 
@@ -453,6 +462,8 @@ def main():
 
         # 验证
         val_loss = evaluate(model, val_loader, criterion, device)
+        # top3的accuracy
+        acc = calculate_accuracy(output, target)
 
         epoch_end_time = time.time()
         epoch_duration = epoch_end_time - epoch_start_time
@@ -464,7 +475,7 @@ def main():
         remaining_time = avg_epoch_time * remaining_epochs
 
         # 转换为更易读的格式
-        print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
+        print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f},Train Accuracy@3: {acc.item():.4f}")
         print(f"Epoch Duration: {format_time(epoch_duration)}, Estimated Remaining Time: {format_time(remaining_time)}")
 
         # 更新学习率调度器

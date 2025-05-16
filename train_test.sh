@@ -65,7 +65,7 @@ echo "模型1训练完成，日志保存在 ${LOG_FILE1}"
 BEST_MODEL_PATH1="${CHECKPOINT_DIR1}/multimodal_encoder_decoder_best.pth"
 if [ -f "$BEST_MODEL_PATH1" ]; then
     echo "开始评估模型1：$BEST_MODEL_PATH1"
-    python -u evaluate_MultiModalEncoderDecoderModel.py --model_path "$BEST_MODEL_PATH1"  --dataset_start_idx 1 --dataset_end_idx 7
+    python -u evaluate_MultiModalEncoderDecoderModel.py --model_path "$BEST_MODEL_PATH1"  --dataset_start_idx 1 --dataset_end_idx 7 | tee -a "$LOG_FILE1"
 else
     echo "未找到模型1的最佳权重文件：$BEST_MODEL_PATH1"
 fi
