@@ -88,13 +88,52 @@ class TopkLoss(nn.Module):
             return masked_loss.sum()
         return masked_loss
 
+#------------新增HybridLoss--------------
+class HybridLoss(nn.Module):
+    def __init__(self, alpha=0.7, k=3):
+        super().__init__()
+        self.alpha = alpha  # 混合权重
+        self.k = k
+        self.ce = nn.CrossEntropyLoss(reduction='none')
+        
+    def forward(self, output, target):
+        """
+        output : [B, T, C]
+        target : [B, T]
+        """
+        # 转换target为类别索引
+        if target.dim() == 3:
+            target = torch.argmax(target, dim=-1)  # [B, T]
+        
+        B, T, C = output.shape
+        
+        # 常规交叉熵损失（保持生成特性）
+        ce_loss = self.ce(output.view(-1, C), target.view(-1))  # [B*T]
+        
+        # Top-K增强损失
+        _, topk = output.topk(self.k, dim=-1)  # [B, T, k]
+        correct = topk.eq(target.unsqueeze(-1)).any(-1)  # [B, T]
+        topk_loss = (1 - correct.float()).mean()  # 错误率
+        
+        # 时间依赖惩罚项
+        seq_penalty = self._sequence_consistency(output, target)  # [1]
+        
+        return self.alpha*ce_loss.mean() + (1-self.alpha)*topk_loss + seq_penalty
+        
+    def _sequence_consistency(self, output, target):
+        """
+        惩罚相邻时间步预测不一致的情况
+        """
+        preds = output.argmax(-1)  # [B, T]
+        diff = (preds[:, 1:] != preds[:, :-1]).float().mean()
+        return diff * 0.2  # 可调节系数
+    
 #------------------------------
-
 # 解析命令行参数
 def parse_args():
     parser = argparse.ArgumentParser(description='Train MultiModalEncoderDecoderModel with MSE or NMSE loss.')
-    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK'], default='MSE',
-                        help='选择损失函数类型：MSE、NMSE 或 TOPK。默认是 MSE。')
+    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK','HYBIRD'], default='MSE',
+                        help='选择损失函数类型：MSE、NMSE、TOPK、HYBIRD。默认是 MSE。')
     parser.add_argument('--epochs', type=int, default=50, help='训练的总轮数。默认是50。')
     parser.add_argument('--batch_size', type=int, default=16, help='批量大小。默认是16。')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='学习率。默认是1e-4。')
@@ -338,6 +377,10 @@ def main():
     elif args.loss == 'TOPK':
         criterion = TopkLoss(k=3, reduction='mean')
         print("Using TopkLoss as the loss function.")
+    #--------------------------------
+    elif args.loss == 'HYBRID':
+        criterion = HybridLoss(alpha=0.7,k=3)
+        print("Using Hybridloss as the loss function.")
     #--------------------------------
     else:
         raise ValueError(f"Unsupported loss type: {args.loss}")
