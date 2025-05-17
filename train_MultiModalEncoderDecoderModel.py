@@ -132,8 +132,8 @@ class HybridLoss(nn.Module):
 # 解析命令行参数
 def parse_args():
     parser = argparse.ArgumentParser(description='Train MultiModalEncoderDecoderModel with MSE or NMSE loss.')
-    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK','HYBIRD'], default='MSE',
-                        help='选择损失函数类型：MSE、NMSE、TOPK、HYBIRD。默认是 MSE。')
+    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK','HYBRID'], default='MSE',
+                        help='选择损失函数类型：MSE、NMSE、TOPK、HYBRID。默认是 MSE。')
     parser.add_argument('--epochs', type=int, default=50, help='训练的总轮数。默认是50。')
     parser.add_argument('--batch_size', type=int, default=16, help='批量大小。默认是16。')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='学习率。默认是1e-4。')
@@ -143,6 +143,7 @@ def parse_args():
                         help='预训练编码器权重的路径。')
     parser.add_argument('--dataset_start_idx', type=int, default=1, help='数据集起始索引。默认是1。')
     parser.add_argument('--dataset_end_idx', type=int, default=9, help='数据集结束索引。默认是9。')
+    parser.add_argument('--resume', type=str, default=None, help='路径 to 中断的模型检查点 (e.g., epoch_15.pth)')
     return parser.parse_args()
 
 def split_dataset_per_scenario_decoder(dataset, test_size=0.1, val_size=0.1, min_samples=10, random_state=42):
@@ -396,9 +397,41 @@ def main():
         patience=5,
         verbose=True
     )
-
+    # -------------------- 添加恢复训练逻辑 --------------------
+    skipped_epochs = 0  # 记录需要跳过的轮数
+    
+    if args.resume is not None:
+        if not os.path.exists(args.resume):
+            print(f"Error: Resume checkpoint not found at {args.resume}")
+            return
+        
+        # 加载模型权重
+        model.load_state_dict(torch.load(args.resume, map_location=device))
+        
+        # 从文件名解析已训练的轮数
+        try:
+            # 假设文件名格式为 "multimodal_encoder_decoder_epoch_15.pth"
+            skipped_epochs = int(args.resume.split('_epoch_')[-1].split('.')[0])
+            print(f"Resuming from epoch {skipped_epochs + 1}")
+        except:
+            print("Warning: Could not parse epoch from checkpoint filename. Starting from epoch 1.")
+        
+        # 手动设置学习率（根据你的训练进度）
+        if skipped_epochs > 0:
+            for param_group in optimizer.param_groups:
+                param_group['lr'] = 1e-4  # 设置为第15个epoch时的学习率
+            print(f"Learning rate manually set to {1e-4}")
+            # 添加恢复成功的明确提示
+            print(f"成功恢复训练状态，将从 epoch {skipped_epochs + 1} 继续")
+    # ---------------------------------------------------------
     # 5. 定义训练和验证函数
-
+    def calculate_accuracy(output, target, k=3):
+        if target.dim() == 3:
+            target = torch.argmax(target, dim=-1)  # [B, T]
+        with torch.no_grad():
+            _, pred = output.topk(k, dim=-1)  # [B, T, k]
+            correct = pred.eq(target.unsqueeze(-1)).any(dim=-1)
+            return correct.float().mean()
     def train_one_epoch(model, data_loader, criterion, optimizer, device):
         model.train()
         epoch_loss = 0.0
@@ -472,13 +505,12 @@ def main():
                 loss = criterion(output, target_mmwave)
                 epoch_loss += loss.item()
 
+                #计算topk准确率
+                topk_acc = calculate_accuracy(output, target_mmwave, k=3)
+
         avg_loss = epoch_loss / len(data_loader)
-        return avg_loss
-    def calculate_accuracy(output, target, k=3):
-        with torch.no_grad():
-            _, pred = output.topk(k, dim=-1)  # [B, T, k]
-            correct = pred.eq(target.unsqueeze(-1)).any(dim=-1)
-            return correct.float().mean()
+        return avg_loss ,topk_acc
+
 
 
     # 6. 训练循环
@@ -504,9 +536,7 @@ def main():
         train_loss = train_one_epoch(model, train_loader, criterion, optimizer, device)
 
         # 验证
-        val_loss = evaluate(model, val_loader, criterion, device)
-        # top3的accuracy
-        acc = calculate_accuracy(output, target)
+        val_loss ,acc = evaluate(model, val_loader, criterion, device)
 
         epoch_end_time = time.time()
         epoch_duration = epoch_end_time - epoch_start_time

@@ -20,6 +20,13 @@ BATCH_SIZE=64
 LEARNING_RATE=1e-4
 PATIENCE=5
 
+# -------------------- 添加恢复参数 --------------------
+# 模型1恢复路径（可选，示例：RESUME_PATH1="./checkpoints/epoch_15.pth"）
+RESUME_PATH1=""
+# 模型2恢复路径（可选）
+RESUME_PATH2=""
+# ------------------------------------------------------
+
 ###############################
 # 模型1相关参数设置（加载预训练编码器1）
 ###############################
@@ -47,7 +54,6 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 echo "============================="
 echo "开始训练模型1（使用预训练编码器：$PRETRAINED_ENCODER_PATH1）..."
 LOG_FILE1="${CHECKPOINT_DIR1}/training_log_${TIMESTAMP}.txt"
-
 python -u train_MultiModalEncoderDecoderModel.py \
     --loss "$LOSS" \
     --epochs "$EPOCHS" \
@@ -57,7 +63,8 @@ python -u train_MultiModalEncoderDecoderModel.py \
     --checkpoint_dir "$CHECKPOINT_DIR1" \
     --dataset_start_idx 1 \
     --dataset_end_idx 7 \
-    --pretrained_encoder_path "$PRETRAINED_ENCODER_PATH1" | tee "$LOG_FILE1"
+    --pretrained_encoder_path "$PRETRAINED_ENCODER_PATH1" \
+    --resume "$RESUME_PATH1" | tee "$LOG_FILE1"
 
 echo "模型1训练完成，日志保存在 ${LOG_FILE1}"
 
