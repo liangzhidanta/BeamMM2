@@ -14,7 +14,7 @@ export CUDA_VISIBLE_DEVICES=1
 ###############################
 # 公共参数设置
 ###############################
-LOSS="HYBRID"
+
 LOSS="HYBRID"
 EPOCHS=50
 BATCH_SIZE=64
@@ -31,8 +31,6 @@ RESUME_PATH2=""
 ###############################
 # 模型1相关参数设置（加载预训练编码器1）
 ###############################
-CHECKPOINT_DIR1="./fig1/wirelessbind_s8"
-PRETRAINED_ENCODER_PATH1="/data2/wzj/BeamMM_checkpoints/mmwave_gps_joint_s8.pth"  # MMWAVE ANCHOR
 CHECKPOINT_DIR1="./fig1/wirelessbind_s8"
 PRETRAINED_ENCODER_PATH1="/data2/wzj/BeamMM_checkpoints/mmwave_gps_joint_s8.pth"  # MMWAVE ANCHOR
 
@@ -57,7 +55,6 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 echo "============================="
 echo "开始训练模型1（使用预训练编码器：$PRETRAINED_ENCODER_PATH1）..."
 LOG_FILE1="${CHECKPOINT_DIR1}/training_log_${TIMESTAMP}.txt"
-python -W ignore -u train_MultiModalEncoderDecoderModel.py \
 python -W ignore -u train_MultiModalEncoderDecoderModel.py \
     --loss "$LOSS" \
     --epochs "$EPOCHS" \

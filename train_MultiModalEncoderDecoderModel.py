@@ -81,8 +81,6 @@ class TopkLoss(nn.Module):
         # 计算损失（仅惩罚Top-k错误的样本）
         loss = F.cross_entropy(output_flat, target_flat, reduction='none')  # [B*T]，表示每个样本的预测是否在 Top-K 中命中真实标签
         masked_loss = loss * ~correct  # 仅保留错误样本的损失值，正确样本的损失被置零
-        loss = F.cross_entropy(output_flat, target_flat, reduction='none')  # [B*T]，表示每个样本的预测是否在 Top-K 中命中真实标签
-        masked_loss = loss * ~correct  # 仅保留错误样本的损失值，正确样本的损失被置零
         
         if self.reduction == 'mean':
             return masked_loss.mean()
@@ -314,10 +312,6 @@ def main():
 
     # 设置设备
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if device.type == 'cuda':
-        print(f"Using device: {device} ({torch.cuda.get_device_name(device)})")
-    else:
-        print(f"Using device: {device}")
     if device.type == 'cuda':
         print(f"Using device: {device} ({torch.cuda.get_device_name(device)})")
     else:
