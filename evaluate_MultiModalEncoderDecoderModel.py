@@ -72,8 +72,24 @@ def accuracy_at_k(predictions, targets, k=1):
     total = batch_size * seq_length * k  # 总的预测索引总数
     precision = total_hit / total
     return precision
-
-
+#-------------另一种topk的实现----------------
+# 修改后的 accuracy_k 函数
+def accuracy_k(predictions, targets, k=1):
+    """
+    predictions: [B, T, C] 模型输出logits
+    targets: [B, T, C] (one-hot) 或 [B, T] (类别索引)
+    """
+    # 处理 one-hot 格式的targets
+    if targets.dim() == 3:
+        targets = torch.argmax(targets, dim=-1)  # 转换为类别索引 [B, T]
+    
+    batch_size, seq_length = targets.shape  # 现在可以正确解包
+    with torch.no_grad():
+        _, pred_topk = predictions.topk(k, dim=-1)  # [B, T, k]
+        target_expanded = targets.unsqueeze(-1)     # [B, T, 1]
+        correct = pred_topk.eq(target_expanded).any(dim=-1)
+        return correct.float().mean()
+#---------------------------------------------
 # 定义测试评估函数
 def test_evaluate(model, data_loader, mse_criterion, nmse_criterion, device, modal='mmwave_gps'):
     model.eval()
@@ -128,8 +144,10 @@ def test_evaluate(model, data_loader, mse_criterion, nmse_criterion, device, mod
 
     accuracy1 =accuracy_at_k(all_predictions, all_targets, k=1)
     accuracy5 = accuracy_at_k(all_predictions, all_targets, k=5)
+    accuracy_1 = accuracy_k(all_predictions, all_targets, k=1)
+    accuracy_5 = accuracy_k(all_predictions, all_targets, k=5)
 
-    return avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5
+    return avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5, accuracy_1, accuracy_5
 
 def split_dataset_per_scenario_decoder(dataset, test_size=0.1, val_size=0.1, min_samples=10, random_state=42):
     """
@@ -331,7 +349,7 @@ def main():
     nmse_criterion = NMSELoss()
 
     # 评估模型
-    avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5 = test_evaluate(
+    avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5, accuracy_1, accuracy_5 = test_evaluate(
         model, test_loader, mse_criterion, nmse_criterion, device, modal=modal
     )
 
@@ -340,6 +358,7 @@ def main():
     print(f"Test Loss (NMSE): {avg_loss_nmse:.4f}")
     print(f"Accuracy@1: {accuracy1:.4f}")
     print(f"Accuracy@5: {accuracy5:.4f}")
-
+    print(f"accuracy@1: {accuracy_1:.4f}")
+    print(f"accuracy@5: {accuracy_5:.4f}")
 if __name__ == '__main__':
     main()

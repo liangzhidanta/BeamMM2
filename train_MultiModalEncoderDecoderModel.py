@@ -79,8 +79,8 @@ class TopkLoss(nn.Module):
         correct = topk_indices.eq(target_flat.unsqueeze(1)).any(dim=1)  # [B*T]
         
         # 计算损失（仅惩罚Top-k错误的样本）
-        loss = F.cross_entropy(output_flat, target_flat, reduction='none')  # [B*T]
-        masked_loss = loss * ~correct  # 错误样本保留损失
+        loss = F.cross_entropy(output_flat, target_flat, reduction='none')  # [B*T]，表示每个样本的预测是否在 Top-K 中命中真实标签
+        masked_loss = loss * ~correct  # 仅保留错误样本的损失值，正确样本的损失被置零
         
         if self.reduction == 'mean':
             return masked_loss.mean()
@@ -241,6 +241,19 @@ def main():
         input_length=input_length, 
         output_length=output_length
     )
+    # ----------添加数据类别检查逻辑-----------
+    print("\n===== 数据模态分析 =====")
+    print(f"配置的模态类型：{modal.upper()}")
+
+    # 获取第一个样本分析数据结构
+    sample = dataset[0]
+    print("\n样本数据结构：")
+    for k, v in sample.items():
+        print(f"│── {k}: {type(v).__name__}")
+        if isinstance(v, torch.Tensor):
+            print(f"    ├── shape: {v.shape}")
+            print(f"    └── dtype: {v.dtype}")
+    # ----------------------------------------
 
     # # 按场景内部划分训练集、验证集和测试集
     # train_indices, val_indices, test_indices = split_dataset_per_scenario_decoder(
@@ -297,7 +310,10 @@ def main():
 
     # 设置设备
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Using device: {device}")
+    if device.type == 'cuda':
+        print(f"Using device: {device} ({torch.cuda.get_device_name(device)})")
+    else:
+        print(f"Using device: {device}")
 
     # 初始化编码器
     encoder = ImageBindModel(

@@ -14,7 +14,7 @@ export CUDA_VISIBLE_DEVICES=1
 ###############################
 # 公共参数设置
 ###############################
-LOSS="TOPK"
+LOSS="HYBRID"
 EPOCHS=50
 BATCH_SIZE=64
 LEARNING_RATE=1e-4
@@ -30,8 +30,8 @@ RESUME_PATH2=""
 ###############################
 # 模型1相关参数设置（加载预训练编码器1）
 ###############################
-CHECKPOINT_DIR1="./fig1/imagebind_s6"
-PRETRAINED_ENCODER_PATH1="/data2/wzj/BeamMM_checkpoints/vision_s6.pth"  # MMWAVE ANCHOR
+CHECKPOINT_DIR1="./fig1/wirelessbind_s8"
+PRETRAINED_ENCODER_PATH1="/data2/wzj/BeamMM_checkpoints/mmwave_gps_joint_s8.pth"  # MMWAVE ANCHOR
 
 ###############################
 # 模型2相关参数设置（加载预训练编码器2）
@@ -54,7 +54,7 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 echo "============================="
 echo "开始训练模型1（使用预训练编码器：$PRETRAINED_ENCODER_PATH1）..."
 LOG_FILE1="${CHECKPOINT_DIR1}/training_log_${TIMESTAMP}.txt"
-python -u train_MultiModalEncoderDecoderModel.py \
+python -W ignore -u train_MultiModalEncoderDecoderModel.py \
     --loss "$LOSS" \
     --epochs "$EPOCHS" \
     --batch_size "$BATCH_SIZE" \
@@ -62,21 +62,26 @@ python -u train_MultiModalEncoderDecoderModel.py \
     --patience "$PATIENCE" \
     --checkpoint_dir "$CHECKPOINT_DIR1" \
     --dataset_start_idx 1 \
-    --dataset_end_idx 7 \
-    --pretrained_encoder_path "$PRETRAINED_ENCODER_PATH1" \
-    --resume "$RESUME_PATH1" | tee "$LOG_FILE1"
-
+    --dataset_end_idx 8 \
+    --pretrained_encoder_path "$PRETRAINED_ENCODER_PATH1" | tee "$LOG_FILE1"
+    #--resume "$RESUME_PATH1" 
 echo "模型1训练完成，日志保存在 ${LOG_FILE1}"
 
 # 模型1训练结束后，评估最佳模型（脚本中默认保存最佳模型为 multimodal_encoder_decoder_best.pth）
 BEST_MODEL_PATH1="${CHECKPOINT_DIR1}/multimodal_encoder_decoder_best.pth"
 if [ -f "$BEST_MODEL_PATH1" ]; then
     echo "开始评估模型1：$BEST_MODEL_PATH1"
-    python -u evaluate_MultiModalEncoderDecoderModel.py --model_path "$BEST_MODEL_PATH1"  --dataset_start_idx 1 --dataset_end_idx 7 | tee -a "$LOG_FILE1"
+    python -W ignore -u evaluate_MultiModalEncoderDecoderModel.py --model_path "$BEST_MODEL_PATH1"  --dataset_start_idx 1 --dataset_end_idx 8 | tee -a "$LOG_FILE1"
 else
     echo "未找到模型1的最佳权重文件：$BEST_MODEL_PATH1"
 fi
-
+# 验证模型的泛化能力
+if [ -f "$BEST_MODEL_PATH1" ]; then
+    echo "开始评估模型1的泛化能力：$BEST_MODEL_PATH1"
+    python -W ignore -u evaluate_MultiModalEncoderDecoderModel.py --model_path "$BEST_MODEL_PATH1"  --dataset_start_idx 9 --dataset_end_idx 9 | tee -a "$LOG_FILE1"
+else
+    echo "未找到模型1的最佳权重文件：$BEST_MODEL_PATH1"
+fi
 ###############################
 # 开始训练模型2
 ###############################
