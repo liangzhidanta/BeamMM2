@@ -15,7 +15,7 @@ export CUDA_VISIBLE_DEVICES=1
 # 公共参数设置
 ###############################
 
-LOSS="HYBRID"
+LOSS="CE"
 EPOCHS=50
 BATCH_SIZE=64
 LEARNING_RATE=1e-4

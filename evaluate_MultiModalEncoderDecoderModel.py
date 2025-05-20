@@ -142,12 +142,12 @@ def test_evaluate(model, data_loader, mse_criterion, nmse_criterion, device, mod
     all_predictions = torch.cat(all_predictions, dim=0)
     all_targets = torch.cat(all_targets, dim=0)
 
-    accuracy1 =accuracy_at_k(all_predictions, all_targets, k=1)
-    accuracy5 = accuracy_at_k(all_predictions, all_targets, k=5)
+    #accuracy1 =accuracy_at_k(all_predictions, all_targets, k=1)
+    #accuracy5 = accuracy_at_k(all_predictions, all_targets, k=5)
     accuracy_1 = accuracy_k(all_predictions, all_targets, k=1)
     accuracy_5 = accuracy_k(all_predictions, all_targets, k=5)
 
-    return avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5, accuracy_1, accuracy_5
+    return avg_loss_mse, avg_loss_nmse, accuracy_1, accuracy_5
 
 def split_dataset_per_scenario_decoder(dataset, test_size=0.1, val_size=0.1, min_samples=10, random_state=42):
     """
@@ -349,15 +349,15 @@ def main():
     nmse_criterion = NMSELoss()
 
     # 评估模型
-    avg_loss_mse, avg_loss_nmse, accuracy1, accuracy5, accuracy_1, accuracy_5 = test_evaluate(
+    avg_loss_mse, avg_loss_nmse, accuracy_1, accuracy_5 = test_evaluate(
         model, test_loader, mse_criterion, nmse_criterion, device, modal=modal
     )
 
     # 输出测试结果
     print(f"Test Loss (MSE): {avg_loss_mse:.4f}")
     print(f"Test Loss (NMSE): {avg_loss_nmse:.4f}")
-    print(f"Accuracy@1: {accuracy1:.4f}")
-    print(f"Accuracy@5: {accuracy5:.4f}")
+    #print(f"Accuracy@1: {accuracy1:.4f}")
+    #print(f"Accuracy@5: {accuracy5:.4f}")
     print(f"accuracy@1: {accuracy_1:.4f}")
     print(f"accuracy@5: {accuracy_5:.4f}")
 if __name__ == '__main__':

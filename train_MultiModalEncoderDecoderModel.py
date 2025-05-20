@@ -128,12 +128,37 @@ class HybridLoss(nn.Module):
         diff = (preds[:, 1:] != preds[:, :-1]).float().mean()
         return diff * 0.2  # 可调节系数
     
+#-------------新增CrossEntropyloss-----------------
+class CrossEntropyLoss(nn.Module):
+    def __init__(self, reduction='mean'):
+        super().__init__()
+        self.reduction = reduction
+        self.ce = nn.CrossEntropyLoss(reduction='none')  # 始终返回非归约结果
+
+    def forward(self, output, target):
+        # 处理one-hot编码目标
+        if target.dim() == 3:
+            target = torch.argmax(target, dim=-1)  # [B, T]
+
+        # 重塑维度
+        output = output.view(-1, output.size(-1))  # [B*T, C]
+        target = target.view(-1)                   # [B*T]
+
+        # 计算基础损失
+        ce_loss = self.ce(output, target)
+        
+        # 自定义归约方式
+        if self.reduction == 'mean':
+            return ce_loss.mean()
+        elif self.reduction == 'sum':
+            return ce_loss.sum()
+        return ce_loss  # 'none'模式返回原始形状
 #------------------------------
 # 解析命令行参数
 def parse_args():
     parser = argparse.ArgumentParser(description='Train MultiModalEncoderDecoderModel with MSE or NMSE loss.')
-    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK','HYBRID'], default='MSE',
-                        help='选择损失函数类型：MSE、NMSE、TOPK、HYBRID。默认是 MSE。')
+    parser.add_argument('--loss', type=str, choices=['MSE', 'NMSE','TOPK','HYBRID','CE'], default='MSE',
+                        help='选择损失函数类型：MSE、NMSE、TOPK、HYBRID、CE。默认是 MSE。')
     parser.add_argument('--epochs', type=int, default=50, help='训练的总轮数。默认是50。')
     parser.add_argument('--batch_size', type=int, default=16, help='批量大小。默认是16。')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='学习率。默认是1e-4。')
@@ -400,6 +425,10 @@ def main():
     elif args.loss == 'HYBRID':
         criterion = HybridLoss(alpha=0.7,k=3)
         print("Using Hybridloss as the loss function.")
+    #--------------------------------
+    elif args.loss == 'CECE':
+        criterion = CrossEntropyLoss()
+        print("Using CrossEntropyLoss as the loss function.")
     #--------------------------------
     else:
         raise ValueError(f"Unsupported loss type: {args.loss}")
